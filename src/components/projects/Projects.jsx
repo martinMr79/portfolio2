@@ -7,13 +7,14 @@ function Projects() {
           
           {/* Repeat this structure for each project */}
           <div className="project-card">  
-            <a href="https://fantastic-puppy-a523c3.netlify.app" target="_blank">
+            <a href="https://fantastic-puppy-a523c3.netlify.app" target="_blank" rel="noopener noreferrer">
               <img src="Images/Holidaze.PNG" alt="Accommodation Booking Site" />
               <p>Accommodation Booking Site</p>
               <a
                 href="https://github.com/martinMr79/project-exam2-martin-mroz#holidaze-accommodation-booking-site"
                 className="project-github-link"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 View code <i className="fab fa-github"></i>
               </a>

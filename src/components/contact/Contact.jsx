@@ -1,16 +1,17 @@
+import { ContactSection, Container, Title} from "./Styled"
+
 function Contact() {
     return (
-      <section id="contact" className="contact-section">
-        <h2>Contact</h2>
-        <div>
-          <div className="validform"></div>
-        </div>
-        <div className="container">
-          {/* Form goes here */}
-        </div>
-        {/* Rest of the contact info goes here */}
-      </section>
+        <ContactSection id="contact">
+            <Title>Contact</Title>
+            <div>
+                {/* Form goes here */}
+            </div>
+            <Container>
+                {/* Rest of the contact info goes here */}
+            </Container>
+        </ContactSection>
     );
-  }
-  
-  export default Contact
+}
+
+export default Contact;
