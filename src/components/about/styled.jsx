@@ -18,11 +18,14 @@ export const H2 = styled.h2`
 `;
 
 export const Paragraph = styled.p`
-  // You can place here any styles you need for your paragraphs.
+ 
 `;
 
 export const Skills = styled.div`
-  // Styles for the skills container.
+      font-size: 2.5rem;
+      color: black;
+      margin: 115px 30px 3px 30px;
+      opacity: 0.5;
 `;
 
 export const Icon = styled.i`

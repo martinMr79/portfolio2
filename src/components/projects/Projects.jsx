@@ -1,31 +1,33 @@
+import React from 'react';
+import { ProjectSection, ProjectHr, H2, ProjectsContainer, ProjectCard, ProjectImage, ProjectP, GithubLinksContainer, GithubLink, ProjectAnchor } from './styled';
+import HolidazeImage from '../../assets/images/Holidaze.PNG';
+
 function Projects() {
-    return (
-      <section>
-        <hr id="projects" />
-        <h2>Projects</h2>
-        <div className="projects-container">
-          
-          {/* Repeat this structure for each project */}
-          <div className="project-card">  
-            <a href="https://fantastic-puppy-a523c3.netlify.app" target="_blank" rel="noopener noreferrer">
-              <img src="Images/Holidaze.PNG" alt="Accommodation Booking Site" />
-              <p>Accommodation Booking Site</p>
-              <a
+  return (
+    <ProjectSection>
+      <ProjectHr id="projects" />
+      <H2>Projects</H2>
+      <ProjectsContainer>
+        
+        <ProjectCard>  
+          <ProjectAnchor href="https://fantastic-puppy-a523c3.netlify.app" target="_blank" rel="noopener noreferrer">
+            <ProjectImage src={HolidazeImage} alt="Accommodation Booking Site" />
+            <ProjectP>Accommodation Booking Site</ProjectP>
+            <GithubLinksContainer>
+              <GithubLink
                 href="https://github.com/martinMr79/project-exam2-martin-mroz#holidaze-accommodation-booking-site"
-                className="project-github-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 View code <i className="fab fa-github"></i>
-              </a>
-            </a>
-          </div>
-  
-          {/* Project cards end */}
-        </div>
-      </section>
-    );
-  }
-  
+              </GithubLink>
+            </GithubLinksContainer>
+          </ProjectAnchor>
+        </ProjectCard>
 
-  export default Projects; 
+      </ProjectsContainer>
+    </ProjectSection>
+  );
+}
+
+export default Projects;
