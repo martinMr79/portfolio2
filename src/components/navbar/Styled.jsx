@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BackgroundImage from '../../assets/images/Portefolio.jpg';
+
 
 export const Nav = styled.nav`
   display: flex;
@@ -21,7 +21,7 @@ export const NavLink = styled.a`
   margin-bottom: 50px; 
   text-decoration: none; 
   font-family: 'MerriweatherSans', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   z-index: 2;
 
   &::after {
@@ -45,17 +45,14 @@ export const NavLink = styled.a`
 
 
 export const Header = styled.header`
-  background-image: url(${BackgroundImage});
-  background-size: cover;
-  background-position: center center;
-  color: white;
+  
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  min-height: 100vh;
   position: relative;   
   text-align: center;
+  
 
   &::after {
     content: '';
@@ -66,7 +63,7 @@ export const Header = styled.header`
     right: 0; 
     left: 0;
     opacity: 0.8;
-    color: white;
+    
   }
 
   h1, hr, h2, a {
@@ -78,6 +75,7 @@ export const Header = styled.header`
     font-size: 57px;
     font-family: 'Roboto-Thin', sans-serif;
     text-transform: uppercase;
+    color: red;
   }
 
   h2 {
