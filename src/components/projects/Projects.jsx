@@ -1,11 +1,10 @@
 import React from 'react';
-import { ProjectSection, ProjectHr, H2, ProjectsContainer, ProjectCard, ProjectImage, ProjectP, GithubLinksContainer, GithubLink, ProjectAnchor } from './styled';
+import { ProjectSection, H2, ProjectsContainer, ProjectCard, ProjectImage, ProjectP, GithubLinksContainer, GithubLink, ProjectAnchor } from './styled';
 import HolidazeImage from '../../assets/images/Holidaze.PNG';
 
 function Projects() {
   return (
     <ProjectSection>
-      <ProjectHr id="projects" />
       <H2>Projects</H2>
       <ProjectsContainer>
         

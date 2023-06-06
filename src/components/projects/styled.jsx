@@ -4,10 +4,6 @@ export const ProjectSection = styled.section`
   // Insert any styles for the project section here
 `;
 
-export const ProjectHr = styled.hr`
-  // Insert any styles for the project hr here
-`;
-
 export const H2 = styled.h2`
   // Insert any styles for the h2 here
 `;

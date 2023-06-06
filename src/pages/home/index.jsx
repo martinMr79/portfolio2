@@ -4,8 +4,7 @@ import { HomeWrapper, Title, Subtitle } from './styled';
 const HomePage = () => {
     return (
       <HomeWrapper>
-        <Title>Martin Mroz<br />Portfolio</Title>
-        <hr />
+        <Title>Martin Mroz<br />Portfolio</Title>    
         <Subtitle>
           Front end developer<br />
           located near Oslo

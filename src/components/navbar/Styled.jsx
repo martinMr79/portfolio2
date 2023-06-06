@@ -66,7 +66,7 @@ export const Header = styled.header`
     
   }
 
-  h1, hr, h2, a {
+  h1, h2, a {
     z-index: 1;
   }
 

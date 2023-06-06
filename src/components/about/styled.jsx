@@ -3,12 +3,13 @@ import styled from 'styled-components';
 export const AboutSection = styled.section`
   max-width: 800px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
 `;
 
-export const AboutHr = styled.hr`
-  background-color: white;
-  border: none; 
-`;
+
 
 export const H2 = styled.h2`
   font-family: 'Merriweather Sans', sans-serif;
@@ -18,7 +19,7 @@ export const H2 = styled.h2`
 `;
 
 export const Paragraph = styled.p`
- 
+ font-size: 18px;
 `;
 
 export const Skills = styled.div`
