@@ -9,13 +9,12 @@ function Navbar() {
         <NavLink href="#projects">Projects</NavLink>
         <NavLink href="#contact">Contact</NavLink>
       </Nav>
-      <h1>Martin Mroz<br />web development student</h1>
+      <h1>Martin Mroz<br />Portfolio</h1>
       <hr />
       <h2>
-        Front end development student at Noroff<br />
+        Front end developer<br />
         located near Oslo
       </h2>
-      <NavLink href="#contact">Contact me</NavLink>
     </Header>
   );
 }

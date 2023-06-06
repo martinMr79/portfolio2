@@ -3,20 +3,22 @@ import BackgroundImage from '../../assets/images/Portefolio.jpg';
 
 export const Nav = styled.nav`
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: start;
   position: fixed;
   background-color: black;
-  padding: 20px;
+  padding: 50px;
   z-index: 999;
   top: 0;
   left: 0;
-  right: 0;
+  bottom: 0;
 `;
+
 
 export const NavLink = styled.a`
   color: bisque;
   position: relative;
-  margin-right: 50px;
+  margin-bottom: 50px; 
   text-decoration: none; 
   font-family: 'MerriweatherSans', sans-serif;
   font-size: 1.2rem;
@@ -40,6 +42,7 @@ export const NavLink = styled.a`
     transform: translateY(0);
   }
 `;
+
 
 export const Header = styled.header`
   background-image: url(${BackgroundImage});
