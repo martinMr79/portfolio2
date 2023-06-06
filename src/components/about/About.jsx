@@ -12,7 +12,7 @@ function About() {
       </Paragraph>
       <br/>
       <Paragraph>
-        I thrive on problem-solving and love the process of creating functional, user-friendly websites. I've worked on several projects during my studies, including [project name], a [brief description of the project]. You can check it out in my 'Projects' section!
+        I thrive on problem-solving and love the process of creating functional, user-friendly websites. I've worked on several projects during my studies. You can check them out in my 'Projects' section!
       </Paragraph>
       <br/>
       <Paragraph>
