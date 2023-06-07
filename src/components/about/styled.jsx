@@ -6,7 +6,7 @@ export const AboutSection = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 
@@ -16,6 +16,12 @@ export const H2 = styled.h2`
   font-size: 2rem;
   margin-top: 65px;
   margin-bottom: 60px;
+
+
+  @media (max-width: 768px) {
+  margin-top: 365px;
+  margin-bottom: 60px;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -26,13 +32,13 @@ export const Skills = styled.div`
       font-size: 2.5rem;
       color: black;
       margin: 115px 30px 3px 30px;
-      opacity: 0.5;
+      opacity: 0.9;
 `;
 
 export const Icon = styled.i`
   font-size: 2.5rem;
   color: black;
   margin: 115px 30px 3px 30px;
-  opacity: 0.5;
+  opacity: 0.8;
 `;
 

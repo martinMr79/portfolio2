@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import BackgroundImage from '../../assets/images/projects.jpg';
 
 export const ProjectSection = styled.section`
   display: flex;
@@ -6,6 +7,9 @@ export const ProjectSection = styled.section`
   min-height: 100vh;
   justify-content: center; 
   align-items: center; 
+  background-image: url(${BackgroundImage});
+  background-size: cover;
+  background-position: center center;
 `;
 
 export const H2 = styled.h2`

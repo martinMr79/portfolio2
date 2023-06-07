@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const Nav = styled.nav`
   display: flex;
   flex-direction: column;
@@ -12,8 +11,19 @@ export const Nav = styled.nav`
   top: 0;
   left: 0;
   bottom: 0;
-`;
+  
 
+  @media (max-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    bottom: auto;
+    padding: 10px 0;
+    
+  }
+`;
 
 export const NavLink = styled.a`
   color: bisque;
@@ -40,6 +50,11 @@ export const NavLink = styled.a`
   &:hover::after {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 0;
+    font-size: 1rem;
   }
 `;
 
