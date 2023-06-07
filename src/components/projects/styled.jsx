@@ -1,11 +1,19 @@
 import styled from 'styled-components';
 
 export const ProjectSection = styled.section`
-  // Insert any styles for the project section here
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+  justify-content: center; 
+  align-items: center; 
 `;
 
 export const H2 = styled.h2`
-  // Insert any styles for the h2 here
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 `;
 
 export const ProjectsContainer = styled.div`
@@ -14,7 +22,8 @@ export const ProjectsContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0px auto 0;
-  min-height: 100vh; 
+  
+ 
 `;
 
 export const ProjectCard = styled.div`
@@ -43,6 +52,7 @@ export const ProjectP = styled.p`
   margin-top: 12px;
   margin-bottom: 30px;
   color: black;
+  text-align: center;
 `;
 
 export const GithubLinksContainer = styled.div`

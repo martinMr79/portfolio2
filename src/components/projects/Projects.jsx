@@ -7,7 +7,7 @@ import BargainBasmentImage from '../../assets/images/BargainBasement.PNG';
 function Projects() {
   return (
     <ProjectSection>
-      <H2>Projects</H2>
+       <H2>Projects</H2>
       <ProjectsContainer>
         
         <ProjectCard>  
