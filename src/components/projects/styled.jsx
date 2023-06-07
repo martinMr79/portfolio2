@@ -31,11 +31,7 @@ export const ProjectCard = styled.div`
   margin: 20px 10px 110px 10px;
   max-width: 350px;
   text-decoration: none;
-  transition: transform 0.3s ease;
 
-  &:hover {
-    transform: scale(1.05);
-  }
 `;
 
 export const ProjectAnchor = styled.a`
@@ -43,9 +39,14 @@ export const ProjectAnchor = styled.a`
 `;
 
 export const ProjectImage = styled.img`
-  width: 300px;
-  height: 190px;
+  width: 320px;
+  height: 200px;
   border: 1px solid black;
+  transition: transform 0.3s ease;
+
+&:hover {
+  transform: scale(1.05);
+}
 `;
 
 export const ProjectP = styled.p`
