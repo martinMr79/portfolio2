@@ -1,5 +1,6 @@
 import React from 'react';
-import { ContactSection, ContactLink, ContactList } from "./Styled"
+import { ContactSection, ContactLink, ContactList, FormContainer } from './Styled'; 
+
 
 
 function Contact() {
@@ -11,6 +12,7 @@ function Contact() {
         return (
             <ContactSection id="contact">
                 <h2>Contact</h2>
+                <FormContainer>
                 <div>
                     <div className="validform"></div>
                 </div>
@@ -64,6 +66,7 @@ function Contact() {
                     </div>
                 </form>
             </div>
+            </FormContainer>
             <p>You can also reach me on:</p>
             <ContactList>
                 <li><ContactLink href="mailto:mamr@hotmal.no" title="e-mail" target="_blank" rel="noopener noreferrer"><i className="far fa-envelope"></i></ContactLink></li>

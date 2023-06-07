@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const FormContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+
 export const ContactSection = styled.section`
   h2 {
     margin-top: 0px;
