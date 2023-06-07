@@ -53,18 +53,20 @@ export const ProjectCard = styled.div`
   margin: 20px 10px 20px 10px;
   max-width: 350px;
   text-decoration: none;
+  background-color: white; 
 
 `;
 
 export const ProjectAnchor = styled.a`
   text-decoration: none;
+  
 `;
 
 export const ProjectImage = styled.img`
   width: 320px;
   height: 200px;
-  border: 1px solid black;
   transition: transform 0.3s ease;
+  margin-bottom: 4px; 
 
 &:hover {
   transform: scale(1.05);
@@ -72,8 +74,10 @@ export const ProjectImage = styled.img`
 `;
 
 export const ProjectP = styled.p`
+  
   font-size: 20px;
-  margin-top: 12px;
+//  padding: 15px;
+  margin-top: 0px;
   margin-bottom: 30px;
   color: black;
   background-color: white;
