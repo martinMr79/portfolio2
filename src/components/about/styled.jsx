@@ -16,7 +16,7 @@ export const H2 = styled.h2`
   font-size: 2rem;
   margin-top: 65px;
   margin-bottom: 60px;
-
+  text-align: center; 
 `;
 
 export const Paragraph = styled.p`

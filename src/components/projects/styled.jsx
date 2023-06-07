@@ -30,7 +30,7 @@ export const H2 = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0; 
+  margin-top: -100px; 
   margin-bottom: 3rem;
   z-index: 2;
 
@@ -70,16 +70,14 @@ export const ProjectAnchor = styled.a`
 export const ProjectImage = styled.img`
   width: 320px;
   height: 200px;
-  
+  border: 1px, solid, black;
   margin-bottom: 4px; 
-
-
 `;
 
 export const ProjectP = styled.p`
   
   font-size: 20px;
-//  padding: 15px;
+  padding: 15px;
   margin-top: 0px;
   margin-bottom: 30px;
   color: black;
