@@ -10,6 +10,19 @@ export const ProjectSection = styled.section`
   background-image: url(${BackgroundImage});
   background-size: cover;
   background-position: center center;
+  position: relative;
+  
+  &::after {
+    content: '';
+    background-color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0; 
+    left: 0;
+    opacity: 0.8;
+    z-index: 1;  
+  }
 `;
 
 export const H2 = styled.h2`
@@ -17,8 +30,13 @@ export const H2 = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 2rem;
-  
+  margin-bottom: 60px;
+  z-index: 2;
+
+  @media (max-width: 768px) {
+  margin-top: 65px;
+  margin-bottom: 40px;
+  }
 `;
 
 export const ProjectsContainer = styled.div`
@@ -27,12 +45,12 @@ export const ProjectsContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0px auto 0;
-  
- 
+  position: relative;
+  z-index: 2;
 `;
 
 export const ProjectCard = styled.div`
-  margin: 20px 10px 110px 10px;
+  margin: 20px 10px 20px 10px;
   max-width: 350px;
   text-decoration: none;
 
@@ -58,7 +76,10 @@ export const ProjectP = styled.p`
   margin-top: 12px;
   margin-bottom: 30px;
   color: black;
+  background-color: white;
   text-align: center;
+  
+  z-index: 2;
 `;
 
 export const GithubLinksContainer = styled.div`

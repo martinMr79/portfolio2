@@ -17,11 +17,6 @@ export const H2 = styled.h2`
   margin-top: 65px;
   margin-bottom: 60px;
 
-
-  @media (max-width: 768px) {
-  margin-top: 365px;
-  margin-bottom: 60px;
-  }
 `;
 
 export const Paragraph = styled.p`
