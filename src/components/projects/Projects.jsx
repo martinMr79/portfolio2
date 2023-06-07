@@ -14,7 +14,9 @@ function Projects() {
           <ProjectAnchor href="https://fantastic-puppy-a523c3.netlify.app" target="_blank" rel="noopener noreferrer">
             <ProjectImage src={HolidazeImage} alt="Accommodation Booking Site" />
             <ProjectP>Accommodation Booking Site</ProjectP>
-            <GithubLinksContainer>
+
+          </ProjectAnchor>
+          <GithubLinksContainer>
               <GithubLink
                 href="https://github.com/martinMr79/project-exam2-martin-mroz#holidaze-accommodation-booking-site"
                 target="_blank"
@@ -23,14 +25,15 @@ function Projects() {
                 View code <i className="fab fa-github"></i>
               </GithubLink>
             </GithubLinksContainer>
-          </ProjectAnchor>
         </ProjectCard>
+        
 
         <ProjectCard>  
           <ProjectAnchor href="https://cute-gumdrop-5dee9b.netlify.app" target="_blank" rel="noopener noreferrer">
             <ProjectImage src={EcomImage} alt="Accommodation Booking Site" />
             <ProjectP>E-Com Store</ProjectP>
-            <GithubLinksContainer>
+          </ProjectAnchor>
+          <GithubLinksContainer>
               <GithubLink
                 href="https://github.com/martinMr79/front-end-frameworks-ca"
                 target="_blank"
@@ -39,14 +42,15 @@ function Projects() {
                 View code <i className="fab fa-github"></i>
               </GithubLink>
             </GithubLinksContainer>
-          </ProjectAnchor>
         </ProjectCard>
 
         <ProjectCard>  
           <ProjectAnchor href="https://snazzy-cupcake-064c05.netlify.app/" target="_blank" rel="noopener noreferrer">
             <ProjectImage src={BargainBasmentImage} alt="Accommodation Booking Site" />
             <ProjectP>Auction site</ProjectP>
-            <GithubLinksContainer>
+
+          </ProjectAnchor>
+          <GithubLinksContainer>
               <GithubLink
                 href="https://github.com/martinMr79/Semester-Project-2/tree/main"
                 target="_blank"
@@ -55,7 +59,6 @@ function Projects() {
                 View code <i className="fab fa-github"></i>
               </GithubLink>
             </GithubLinksContainer>
-          </ProjectAnchor>
         </ProjectCard>
 
       </ProjectsContainer>

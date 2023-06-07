@@ -13,6 +13,7 @@ export const H2 = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 2rem;
   
 `;
 
@@ -60,15 +61,14 @@ export const GithubLinksContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+
 `;
 
 export const GithubLink = styled.a`
   font-size: 17px;
   align-items: center;
-  width: 50px;
-  height: 50px;
   padding: 12px;
-  margin-top: 80px;
   text-decoration: none;
   color: black;
   transition: 0.5s;
@@ -79,4 +79,5 @@ export const GithubLink = styled.a`
     color: white;
     background-color: black;
   }
+
 `;
