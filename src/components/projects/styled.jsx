@@ -13,7 +13,8 @@ export const ProjectsContainer = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin: 60px auto 0;
+  margin: 0px auto 0;
+  min-height: 100vh; 
 `;
 
 export const ProjectCard = styled.div`

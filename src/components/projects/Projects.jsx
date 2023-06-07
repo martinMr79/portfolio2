@@ -32,7 +32,7 @@ function Projects() {
             <ProjectP>E-Com Store</ProjectP>
             <GithubLinksContainer>
               <GithubLink
-                href="https://github.com/martinMr79/jsframework_ca"
+                href="https://github.com/martinMr79/front-end-frameworks-ca"
                 target="_blank"
                 rel="noopener noreferrer"
               >
