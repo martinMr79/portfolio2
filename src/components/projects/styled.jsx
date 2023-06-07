@@ -30,7 +30,8 @@ export const H2 = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 60px;
+  margin-top: 0; 
+  margin-bottom: 3rem;
   z-index: 2;
 
   @media (max-width: 768px) {
@@ -54,7 +55,11 @@ export const ProjectCard = styled.div`
   max-width: 350px;
   text-decoration: none;
   background-color: white; 
+  transition: transform 0.3s ease;
 
+  &:hover {
+  transform: scale(1.05);
+}
 `;
 
 export const ProjectAnchor = styled.a`
@@ -65,12 +70,10 @@ export const ProjectAnchor = styled.a`
 export const ProjectImage = styled.img`
   width: 320px;
   height: 200px;
-  transition: transform 0.3s ease;
+  
   margin-bottom: 4px; 
 
-&:hover {
-  transform: scale(1.05);
-}
+
 `;
 
 export const ProjectP = styled.p`
