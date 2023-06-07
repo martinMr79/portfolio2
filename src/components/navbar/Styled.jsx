@@ -20,7 +20,7 @@ export const Nav = styled.nav`
     width: 100%;
     height: auto;
     bottom: auto;
-    padding: 10px 0;
+    padding: 14px 0;
     
   }
 `;
