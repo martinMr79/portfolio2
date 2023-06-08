@@ -1,11 +1,20 @@
 import React from 'react';
-import { AboutSection, 
-   H2, Paragraph, Skills, Icon } from './styled'; 
+import { 
+  AboutSection, 
+  H2, 
+  Paragraph, 
+  Skills, 
+  Icon,
+  AboutContainer
+ } 
+ 
+  from './styled'; 
 
 function About() {
   return (
-    <div>
-      <AboutSection>
+   
+  <AboutSection>
+    <AboutContainer>
       <H2>About</H2>
       <Paragraph>
         I've recently completed my studies in Frontend Development at Noroff School of Technology in Norway, and I'm eager to apply what I've learned in a real-world setting. I'm skilled in HTML, CSS, JavaScript, and React and I'm always looking for opportunities to improve and expand my skills.
@@ -30,8 +39,9 @@ function About() {
           <Icon className="fa-brands fa-js"></Icon>
           <Icon className="fa-brands fa-wordpress"></Icon>
         </Skills>
-      </AboutSection>
-    </div>
+     </AboutContainer>     
+  </AboutSection>
+    
   );
 }
 
