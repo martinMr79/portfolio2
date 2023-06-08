@@ -34,21 +34,33 @@ export const H2 = styled.h2`
   margin-bottom: 3rem;
   z-index: 2;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
   margin-top: 65px;
   margin-bottom: 35px;
   }
 `;
 
 export const ProjectsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  align-items: start;
   justify-content: center;
-  margin: 0px auto 0;
+  margin: 0px auto;
+
   position: relative;
   z-index: 2;
+
+  @media (min-width: 680px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
+
+
 
 export const ProjectCard = styled.div`
   margin: 20px 0px;
