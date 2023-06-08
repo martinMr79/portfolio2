@@ -6,14 +6,15 @@ export const Nav = styled.nav`
   align-items: start;
   position: fixed;
   background-color: black;
-  padding: 50px;
-  z-index: 999;
+  padding: 40px;
+  z-index: 9;
   top: 0;
   left: 0;
   bottom: 0;
-  
 
-  @media (max-width: 768px) {
+
+
+  @media (max-width: 900px) {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -21,17 +22,17 @@ export const Nav = styled.nav`
     height: auto;
     bottom: auto;
     padding: 14px 0;
-    
   }
 `;
 
 export const NavLink = styled.a`
   color: bisque;
   position: relative;
-  margin-bottom: 50px; 
+  margin-top: 20px;
+  margin-bottom: 40px; 
   text-decoration: none; 
   font-family: 'MerriweatherSans', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   z-index: 2;
 
   &::after {
@@ -53,7 +54,7 @@ export const NavLink = styled.a`
   }
 
   @media (max-width: 768px) {
-    margin-bottom: 0;
+    margin: 10px 0;
     font-size: 1rem;
   }
 `;

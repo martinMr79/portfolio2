@@ -28,16 +28,23 @@ export const AboutSection = styled.section`
 export const AboutContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
+  margin-top: 95px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 2; 
-`
+  
+
+  @media (max-width: 1200px) {
+    max-width: 550px;
+  }
+`;
+
+
 
 export const H2 = styled.h2`
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 2rem;
-  margin-top: 65px;
   margin-bottom: 35px;
   text-align: center;  
 `;
