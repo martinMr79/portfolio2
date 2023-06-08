@@ -14,7 +14,7 @@ export const Nav = styled.nav`
 
 
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -53,7 +53,7 @@ export const NavLink = styled.a`
     transform: translateY(0);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     margin: 10px 0;
     font-size: 1rem;
   }
