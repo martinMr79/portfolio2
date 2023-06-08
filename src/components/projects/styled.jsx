@@ -36,7 +36,7 @@ export const H2 = styled.h2`
 
   @media (max-width: 768px) {
   margin-top: 65px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   }
 `;
 
@@ -51,14 +51,15 @@ export const ProjectsContainer = styled.div`
 `;
 
 export const ProjectCard = styled.div`
-  margin: 20px 10px 20px 10px;
+  margin: 20px 0px;
   max-width: 350px;
   text-decoration: none;
   background-color: white; 
   transition: transform 0.3s ease;
+  
 
   &:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 `;
 
