@@ -3,11 +3,12 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { TextField, Button, Box } from '@mui/material';
+import { FormContainer } from './Styled';
 
 const schema = yup.object().shape({
-  name: yup.string().required(),
+  name: yup.string().min(3).max(25).required(),
   email: yup.string().required().email(),
-  message: yup.string().required(),
+  message: yup.string().min(5).max(500).required(),
 });
 
 const ContactForm = () => {
@@ -18,6 +19,7 @@ const ContactForm = () => {
   const onSubmit = data => console.log(data);
 
   return (
+    <FormContainer>
     <form onSubmit={handleSubmit(onSubmit)}>
       <Box marginBottom={2}>
         <Controller 
@@ -45,6 +47,7 @@ const ContactForm = () => {
       </Box>
       <Button variant="contained" type="submit">Submit</Button>
     </form>
+    </FormContainer>
   );
 };
 
