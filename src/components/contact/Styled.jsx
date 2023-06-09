@@ -4,18 +4,18 @@ export const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  height: 100vh;
 `;
 
 
-export const ContactSection = styled.section`
+/* export const ContactSection = styled.section`
   h2 {
     margin-top: 0px;
     padding-top: 62px;
   }
 `;
 
-export const ContactList = styled.ul`
+ export const ContactList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
@@ -43,4 +43,4 @@ export const ContactLink = styled.a`
     transition: 0.3s;
     transform: scale(1.1);
   }
-`;
+`; */
