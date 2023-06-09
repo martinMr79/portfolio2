@@ -20,6 +20,7 @@ const ContactForm = () => {
 
   return (
     <PageWrapper>
+      <div>
     <H2>Contact</H2>
     <FormContainer>
       
@@ -48,10 +49,11 @@ const ContactForm = () => {
           render={({ field }) => <TextField label="Message" fullWidth multiline rows={4} {...field} error={!!errors.message} helperText={errors.message?.message} />}
         />
       </Box>
-      <Button variant="contained" type="submit">Submit</Button>
+      <Button variant="outlined" type="submit">Submit</Button>
     </form>
 
     </FormContainer>
+    </div>
         <ContactSection>
 
             <p>You can also reach me on:</p>

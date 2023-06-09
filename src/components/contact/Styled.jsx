@@ -18,8 +18,8 @@ export const FormContainer = styled.div`
 export const H2 = styled.h2`
   font-family: 'Merriweather Sans', sans-serif;
   font-size: 2rem;
-  margin-bottom: 35px;
   margin-top: 5rem;
+  margin-bottom: 3rem;
   text-align: center;  
 `;
 
