@@ -3,7 +3,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { TextField, Button, Box } from '@mui/material';
-import { FormContainer, ContactLink, ContactSection, ContactList, H2 } from './Styled';
+import { FormContainer, ContactLink, ContactSection, ContactList, H2, PageWrapper } from './Styled';
 
 const schema = yup.object().shape({
   name: yup.string().min(3).max(25).required(),
@@ -19,7 +19,7 @@ const ContactForm = () => {
   const onSubmit = data => console.log(data);
 
   return (
-    <>
+    <PageWrapper>
     <H2>Contact</H2>
     <FormContainer>
       
@@ -62,7 +62,7 @@ const ContactForm = () => {
                 <li><ContactLink id="profile-link" href="https://github.com/martinMr79" title="github" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></ContactLink></li>
             </ContactList>
            </ContactSection>
-           </>
+           </PageWrapper>
   );
 };
 
