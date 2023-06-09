@@ -1,18 +1,33 @@
 import styled from 'styled-components';
 
+export const PageWrapper = styled.div`  
+  min-height: 100vh;
+  
+`
+
 export const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  
 `;
 
+export const H2 = styled.h2`
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 35px;
+  margin-top: 5rem;
+  text-align: center;  
+`;
 
-/* export const ContactSection = styled.section`
-  h2 {
-    margin-top: 0px;
-    padding-top: 62px;
-  }
+ export const ContactSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  margin-top: 0px;
+  padding-top: 4rem;
+    
 `;
 
  export const ContactList = styled.ul`
@@ -23,6 +38,8 @@ export const FormContainer = styled.div`
   padding: 0px 0px 30px 0px;
   margin-bottom: 0px;
 `;
+
+
 
 export const ContactLink = styled.a`
   font-size: 30px;
@@ -43,4 +60,4 @@ export const ContactLink = styled.a`
     transition: 0.3s;
     transform: scale(1.1);
   }
-`; */
+`; 

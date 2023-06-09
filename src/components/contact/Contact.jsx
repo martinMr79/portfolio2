@@ -3,7 +3,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { TextField, Button, Box } from '@mui/material';
-import { FormContainer } from './Styled';
+import { FormContainer, ContactLink, ContactSection, ContactList, H2 } from './Styled';
 
 const schema = yup.object().shape({
   name: yup.string().min(3).max(25).required(),
@@ -19,7 +19,10 @@ const ContactForm = () => {
   const onSubmit = data => console.log(data);
 
   return (
+    <>
+    <H2>Contact</H2>
     <FormContainer>
+      
     <form onSubmit={handleSubmit(onSubmit)}>
       <Box marginBottom={2}>
         <Controller 
@@ -47,23 +50,22 @@ const ContactForm = () => {
       </Box>
       <Button variant="contained" type="submit">Submit</Button>
     </form>
+
     </FormContainer>
+        <ContactSection>
+
+            <p>You can also reach me on:</p>
+            <ContactList>
+                <li><ContactLink href="mailto:mamr@hotmal.no" title="e-mail" target="_blank" rel="noopener noreferrer"><i className="far fa-envelope"></i></ContactLink></li>
+                <li><ContactLink href="tel:004790285550" title="phone" target="_blank" rel="noopener noreferrer"><i className="fas fa-phone"></i></ContactLink></li>
+                <li><ContactLink href="linkedinProfileURL" title="linkedin" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin"></i></ContactLink></li>
+                <li><ContactLink id="profile-link" href="https://github.com/martinMr79" title="github" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></ContactLink></li>
+            </ContactList>
+           </ContactSection>
+           </>
   );
 };
 
 export default ContactForm;
 
-
- 
-//            <ContactSection>
-//                <h2>Contact</h2>
-//
-//            <p>You can also reach me on:</p>
-//            <ContactList>
- //               <li><ContactLink href="mailto:mamr@hotmal.no" title="e-mail" target="_blank" rel="noopener noreferrer"><i className="far fa-envelope"></i></ContactLink></li>
-//                <li><ContactLink href="tel:004790285550" title="phone" target="_blank" rel="noopener noreferrer"><i className="fas fa-phone"></i></ContactLink></li>
-//                <li><ContactLink href="linkedinProfileURL" title="linkedin" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin"></i></ContactLink></li>
-//                <li><ContactLink id="profile-link" href="https://github.com/martinMr79" title="github" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></ContactLink></li>
-//            </ContactList>
-//        </ContactSection>
 
