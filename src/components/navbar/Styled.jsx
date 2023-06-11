@@ -6,7 +6,7 @@ export const Nav = styled.nav`
   align-items: start;
   position: fixed;
   background-color: black;
-  padding: 40px;
+  padding: 30px;
   z-index: 9;
   top: 0;
   left: 0;
@@ -14,9 +14,9 @@ export const Nav = styled.nav`
 
   @media (max-width: 768px) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 14px 0;
+    padding: 14px 20px; 
     width: 100%;
     height: auto;
     bottom: auto;
@@ -32,21 +32,14 @@ export const Nav = styled.nav`
   }
 `;
 
-
-
 export const Hamburger = styled.div`
   cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   z-index: 10;
-
-  @media (max-width: 768px) {
-    position: absolute;
-    right: 20px;
-  }
 
   div {
     width: 2rem;
@@ -99,15 +92,14 @@ export const NavLink = styled.a`
     transform: translateY(0);
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 768px) {
+    order: -1; 
     margin: 10px 0;
     font-size: 1rem;
   }
 `;
 
-
 export const Header = styled.header`
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,7 +107,6 @@ export const Header = styled.header`
   position: relative;   
   text-align: center;
   
-
   &::after {
     content: '';
     background-color: black;
@@ -125,7 +116,6 @@ export const Header = styled.header`
     right: 0; 
     left: 0;
     opacity: 0.8;
-    
   }
 
   h1, h2, a {
@@ -137,7 +127,6 @@ export const Header = styled.header`
     font-size: 57px;
     font-family: 'Roboto-Thin', sans-serif;
     text-transform: uppercase;
-    color: red;
   }
 
   h2 {

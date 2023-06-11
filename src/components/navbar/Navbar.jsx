@@ -8,8 +8,8 @@ function Navbar() {
 
   return (
     <Header>
-      <Nav>
-        <Hamburger onClick={toggle}>
+      <Nav isOpen={isOpen}>
+        <Hamburger isOpen={isOpen} onClick={toggle}>
           <div />
           <div />
           <div />
@@ -26,6 +26,7 @@ function Navbar() {
     </Header>
   );
 }
+
 
 export default Navbar;
 
