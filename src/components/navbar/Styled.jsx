@@ -11,6 +11,7 @@ export const Nav = styled.nav`
   top: 0;
   left: 0;
   bottom: 0;
+  width: ${({ isOpen }) => (isOpen ? 'auto' : '90px')};
 
   @media (max-width: 768px) {
     flex-direction: row;
