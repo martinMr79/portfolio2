@@ -11,7 +11,9 @@ export const Nav = styled.nav`
   top: 0;
   left: 0;
   bottom: 0;
-  width: ${({ isOpen }) => (isOpen ? 'auto' : '95px')};
+  max-width: ${({ isOpen }) => (isOpen ? '150px' : '100px')};
+  width: 100%;
+  transition: max-width 0.5s ease-in-out;
 
   @media (max-width: 1000px) {
     flex-direction: row;
