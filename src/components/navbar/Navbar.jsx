@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import { Header, Nav, NavLink, Hamburger } from './Styled'; 
+import { Header, Nav, NavLink, Hamburger, IconContainer } from './Styled'; 
 import { Link } from 'react-router-dom';
+import CloseIcon from '@mui/icons-material/Close';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,11 +11,9 @@ function Navbar() {
   return (
     <Header>
       <Nav isOpen={isOpen}>
-        <Hamburger isOpen={isOpen} onClick={toggle}>
-          <div />
-          <div />
-          <div />
-        </Hamburger>
+        <IconContainer onClick={toggle}>
+          {isOpen ? <CloseIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
+        </IconContainer>
         
         <NavLink as={Link} to="/projects" isOpen={isOpen}>Projects</NavLink>
         <NavLink as={Link} to="/contact" isOpen={isOpen}>Skills</NavLink>
@@ -24,12 +24,7 @@ function Navbar() {
   );
 }
 
-
-
 export default Navbar;
-
-
-
 
 
 

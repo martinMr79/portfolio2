@@ -11,9 +11,9 @@ export const Nav = styled.nav`
   top: 0;
   left: 0;
   bottom: 0;
-  width: ${({ isOpen }) => (isOpen ? 'auto' : '90px')};
+  width: ${({ isOpen }) => (isOpen ? 'auto' : '95px')};
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,7 @@ export const Nav = styled.nav`
     display: flex;
     flex-direction: column;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1000px) {
       flex-direction: row;
     }
   }
@@ -65,6 +65,11 @@ export const Hamburger = styled.div`
   }
 `;
 
+export const IconContainer = styled.div`
+  color: bisque;
+  cursor: pointer;
+`;
+
 export const NavLink = styled.a`
   color: bisque;
   position: relative;
@@ -95,7 +100,7 @@ export const NavLink = styled.a`
     transform: translateY(0);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     order: -1; 
     margin: 10px 0;
     font-size: 1rem;
