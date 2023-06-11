@@ -55,16 +55,27 @@ export const Paragraph = styled.p`
 `;
 
 export const Skills = styled.div`
-      font-size: 2.5rem;
-      color: black;
-      margin: 115px 30px 3px 30px;
-      opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  h2 {
+    text-align: center;
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
 `;
+
 
 export const Icon = styled.i`
   font-size: 2.5rem;
   color: black;
-  margin: 115px 30px 3px 30px;
+  margin: 35px 15px 3px 15px;
   opacity: 0.8;
 `;
 

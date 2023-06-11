@@ -1,8 +1,8 @@
 import React from 'react';
 import { ProjectSection, H2, ProjectsContainer, ProjectCard, ProjectImage, ProjectP, GithubLinksContainer, GithubLink, ProjectAnchor } from './styled';
-import  HolidazeImage  from '../../assets/images/Holidaze.PNG';
-import EcomImage from '../../assets/images/Ecom.PNG';
-import BargainBasmentImage from '../../assets/images/BargainBasement.PNG';
+import  HolidazeImage  from '../../assets/images/Holidaze.jpg';
+import EcomImage from '../../assets/images/Ecom.jpg';
+import BargainBasmentImage from '../../assets/images/BargainBasement.jpg';
 
 function Projects() {
   return (
