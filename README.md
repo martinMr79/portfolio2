@@ -1,6 +1,7 @@
 # Your project title
 
-![FrontPage](https://github.com/martinMr79/portfolio2/master/src/assets/images/FrontPage.PNG)
+![FrontPage](https://raw.githubusercontent.com/martinMr79/portfolio2/main/src/assets/images/FrontPage.PNG)
+
 
 A simple overview of the use/purpose of the project.
 
