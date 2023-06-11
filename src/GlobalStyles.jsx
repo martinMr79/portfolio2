@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import RobotoThin from "./assets/fonts/";
-//import RobotoThin from "./assets/fonts/Roboto-Thin.ttf";
-import MerriweatherSans from "./assets/fonts/MerriweatherSans-Regular.ttf";
+import RobotoThin from "./assets/fonts/Roboto/Roboto-Thin.ttf";
+import MerriweatherSans from "./assets/fonts/MerriweatherSans/static/MerriweatherSans-Medium.ttf";
+
 
 const GlobalStyles = createGlobalStyle`
   @font-face {
