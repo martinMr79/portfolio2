@@ -21,6 +21,7 @@ export const Nav = styled.nav`
     align-items: center;
     padding: 14px 20px; 
     width: 100%;
+    max-width: 100%;
     height: auto;
     bottom: auto;
   }
