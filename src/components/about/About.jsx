@@ -32,13 +32,17 @@ function About() {
         I'm interested in any work related to frontend development, especially opportunities that will allow me to grow and learn. If you think we could work well together, I'd love to hear from you!
       </Paragraph>
 
+        
+      <Skills>
+  <h2>Skills</h2>
+  <div>
+    <Icon className="fa-brands fa-html5"></Icon>
+    <Icon className="fa-brands fa-css3-alt"></Icon>
+    <Icon className="fa-brands fa-js"></Icon>
+    <Icon className="fa-brands fa-react"></Icon>
+  </div>
+</Skills>
 
-        <Skills>
-          <Icon className="fa-brands fa-html5"></Icon>
-          <Icon className="fa-brands fa-css3-alt"></Icon>
-          <Icon className="fa-brands fa-js"></Icon>
-          <Icon className="fa-brands fa-wordpress"></Icon>
-        </Skills>
      </AboutContainer>     
   </AboutSection>
     
