@@ -46,13 +46,15 @@ export const NavLink = styled.a`
   color: bisque;
   position: relative;
   margin-top: 50px;
-  margin-bottom: 0px; 
-  text-decoration: none; 
+  margin-bottom: 0px;
+  text-decoration: none;
   font-family: 'MerriweatherSans', sans-serif;
   font-size: 1.4rem;
   z-index: 2;
-  visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
-  height: ${({ isOpen }) => (isOpen ? 'auto' : '0')};
+  opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
+  max-height: ${({ isOpen }) => (isOpen ? '100px' : '0')};
+  transition: opacity 0.5s, max-height 0.5s;
+
 
   &::after {
     content: "";
@@ -77,6 +79,11 @@ export const NavLink = styled.a`
     margin: 10px 0;
     font-size: 1rem;
   }
+
+  @media (min-width: 1001px) {
+    transition: all 0.5s ease-in-out 0.2s, opacity 0.5s, max-height 0.5s;
+  }
+
 `;
 
 export const Header = styled.header`
