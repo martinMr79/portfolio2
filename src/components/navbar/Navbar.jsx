@@ -16,7 +16,7 @@ function Navbar() {
         </IconContainer>
         
         <NavLink as={Link} to="/projects" isOpen={isOpen}>Projects</NavLink>
-        <NavLink as={Link} to="/contact" isOpen={isOpen}>Skills</NavLink>
+     
         <NavLink as={Link} to="/about" isOpen={isOpen}>About</NavLink>
         <NavLink as={Link} to="/contact" isOpen={isOpen}>Contact</NavLink>
       </Nav>
