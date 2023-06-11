@@ -33,37 +33,6 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Hamburger = styled.div`
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 1.5rem;
-  height: 1.5rem;
-  z-index: 10;
-
-  div {
-    width: 2rem;
-    height: 0.25rem;
-    background: bisque;
-    border-radius: 10px;
-    transform-origin: 1px;
-    position: relative;
-    transition: opacity 300ms, transform 300ms;
-
-    :first-child {
-      transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0)")};
-    }
-
-    :nth-child(2) {
-      opacity: ${({ isOpen }) => (isOpen ? "0" : "1")};
-    }
-
-    :nth-child(3) {
-      transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0)")};
-    }
-  }
-`;
 
 export const IconContainer = styled.div`
   color: bisque;
@@ -73,8 +42,8 @@ export const IconContainer = styled.div`
 export const NavLink = styled.a`
   color: bisque;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 40px; 
+  margin-top: 50px;
+  margin-bottom: 0px; 
   text-decoration: none; 
   font-family: 'MerriweatherSans', sans-serif;
   font-size: 1.4rem;
