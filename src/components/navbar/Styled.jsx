@@ -12,16 +12,62 @@ export const Nav = styled.nav`
   left: 0;
   bottom: 0;
 
-
-
-  @media (max-width: 1000px) {
+  @media (max-width: 768px) {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding: 14px 0;
     width: 100%;
     height: auto;
     bottom: auto;
-    padding: 14px 0;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 768px) {
+      flex-direction: row;
+    }
+  }
+`;
+
+
+
+export const Hamburger = styled.div`
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    right: 20px;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: bisque;
+    border-radius: 10px;
+    transform-origin: 1px;
+    position: relative;
+    transition: opacity 300ms, transform 300ms;
+
+    :first-child {
+      transform: ${({ isOpen }) => (isOpen ? "rotate(45deg)" : "rotate(0)")};
+    }
+
+    :nth-child(2) {
+      opacity: ${({ isOpen }) => (isOpen ? "0" : "1")};
+    }
+
+    :nth-child(3) {
+      transform: ${({ isOpen }) => (isOpen ? "rotate(-45deg)" : "rotate(0)")};
+    }
   }
 `;
 
