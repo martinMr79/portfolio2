@@ -7,10 +7,15 @@ export const FormWrapper = styled.div`
   border-radius: 5px; 
 `;
 
+export const InnerWrapper = styled.div`
+  position: relative; 
+  z-index: 2;
+  padding: 2em;
+`;
+
+
 export const PageWrapper = styled.div`  
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
   min-height: 100vh;
   background-image: url(${BackgroundImage});
   background-size: cover;
@@ -27,8 +32,8 @@ export const PageWrapper = styled.div`
     opacity: 0.9;
     z-index: 1;  
   }
-  
-`
+`;
+
 
 export const FormContainer = styled.div`
   display: flex;
