@@ -14,18 +14,16 @@ function Navbar() {
           <div />
           <div />
         </Hamburger>
-        {isOpen && (
-          <>
-            <NavLink as={Link} to="/projects">Projects</NavLink>
-            <NavLink as={Link} to="/contact">Skills</NavLink>
-            <NavLink as={Link} to="/about">About</NavLink>
-            <NavLink as={Link} to="/contact">Contact</NavLink>
-          </>
-        )}
+        
+        <NavLink as={Link} to="/projects" isOpen={isOpen}>Projects</NavLink>
+        <NavLink as={Link} to="/contact" isOpen={isOpen}>Skills</NavLink>
+        <NavLink as={Link} to="/about" isOpen={isOpen}>About</NavLink>
+        <NavLink as={Link} to="/contact" isOpen={isOpen}>Contact</NavLink>
       </Nav>
     </Header>
   );
 }
+
 
 
 export default Navbar;

@@ -73,6 +73,8 @@ export const NavLink = styled.a`
   font-family: 'MerriweatherSans', sans-serif;
   font-size: 1.4rem;
   z-index: 2;
+  visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
+  height: ${({ isOpen }) => (isOpen ? 'auto' : '0')};
 
   &::after {
     content: "";
