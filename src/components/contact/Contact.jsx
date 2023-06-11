@@ -3,7 +3,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { TextField, Button, Box } from '@mui/material';
-import { FormContainer, ContactLink, ContactSection, ContactList, H2, PageWrapper } from './Styled';
+import { FormContainer, ContactLink, ContactSection, ContactList, H2, PageWrapper, FormWrapper } from './Styled';
 
 const schema = yup.object().shape({
   name: yup.string().min(3).max(25).required(),
@@ -23,16 +23,28 @@ const ContactForm = () => {
       <div style={{ zIndex: 2 }}>
     <H2>Contact</H2>
     <FormContainer>
-      
+    <FormWrapper>
     <form onSubmit={handleSubmit(onSubmit)}>
-      <Box marginBottom={2}>
-        <Controller 
-          name="name"
-          control={control}
-          defaultValue=""
-          render={({ field }) => <TextField label="Name" fullWidth {...field} error={!!errors.name} helperText={errors.name?.message} />}
-        />
-      </Box>
+    <Box marginBottom={2}>
+  <Controller 
+    name="name"
+    control={control}
+    defaultValue=""
+    render={({ field }) => 
+      <TextField 
+        label="Message" 
+        fullWidth 
+        multiline 
+        rows={4} 
+        {...field} 
+        error={!!errors.message} 
+        helperText={errors.message?.message} 
+        inputProps={{ style: { color: 'white' } }}
+      />
+    }
+  />
+</Box>
+
       <Box marginBottom={2}>
         <Controller 
           name="email"
@@ -51,7 +63,7 @@ const ContactForm = () => {
       </Box>
       <Button variant="outlined" type="submit">Submit</Button>
     </form>
-
+    </FormWrapper>
     </FormContainer>
     </div>
         <ContactSection>

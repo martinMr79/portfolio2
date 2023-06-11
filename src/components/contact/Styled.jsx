@@ -1,6 +1,12 @@
 import styled from 'styled-components';
 import BackgroundImage from '../../assets/images/ContactMe.jpg';
 
+export const FormWrapper = styled.div`
+  background-color: white;
+  padding: 25px;
+  border-radius: 5px; 
+`;
+
 export const PageWrapper = styled.div`  
   display: flex;
   flex-direction: column;
@@ -18,7 +24,7 @@ export const PageWrapper = styled.div`
     bottom: 0;
     right: 0; 
     left: 0;
-    opacity: 0.8;
+    opacity: 0.9;
     z-index: 1;  
   }
   
