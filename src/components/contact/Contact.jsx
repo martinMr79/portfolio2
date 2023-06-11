@@ -20,7 +20,7 @@ const ContactForm = () => {
 
   return (
     <PageWrapper>
-      <div>
+      <div style={{ zIndex: 2 }}>
     <H2>Contact</H2>
     <FormContainer>
       
