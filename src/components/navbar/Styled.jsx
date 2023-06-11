@@ -6,34 +6,50 @@ export const Nav = styled.nav`
   align-items: start;
   position: fixed;
   background-color: black;
-  padding: 40px;
+  padding: 30px;
   z-index: 9;
   top: 0;
   left: 0;
   bottom: 0;
-
-
+  width: ${({ isOpen }) => (isOpen ? 'auto' : '95px')};
 
   @media (max-width: 1000px) {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 14px 20px; 
     width: 100%;
     height: auto;
     bottom: auto;
-    padding: 14px 0;
   }
+
+  div {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1000px) {
+      flex-direction: row;
+    }
+  }
+`;
+
+
+export const IconContainer = styled.div`
+  color: bisque;
+  cursor: pointer;
 `;
 
 export const NavLink = styled.a`
   color: bisque;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 40px; 
+  margin-top: 50px;
+  margin-bottom: 0px; 
   text-decoration: none; 
   font-family: 'MerriweatherSans', sans-serif;
   font-size: 1.4rem;
   z-index: 2;
+  visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
+  height: ${({ isOpen }) => (isOpen ? 'auto' : '0')};
 
   &::after {
     content: "";
@@ -54,14 +70,13 @@ export const NavLink = styled.a`
   }
 
   @media (max-width: 1000px) {
+    order: -1; 
     margin: 10px 0;
     font-size: 1rem;
   }
 `;
 
-
 export const Header = styled.header`
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,7 +84,6 @@ export const Header = styled.header`
   position: relative;   
   text-align: center;
   
-
   &::after {
     content: '';
     background-color: black;
@@ -79,7 +93,6 @@ export const Header = styled.header`
     right: 0; 
     left: 0;
     opacity: 0.8;
-    
   }
 
   h1, h2, a {
@@ -91,7 +104,6 @@ export const Header = styled.header`
     font-size: 57px;
     font-family: 'Roboto-Thin', sans-serif;
     text-transform: uppercase;
-    color: red;
   }
 
   h2 {
