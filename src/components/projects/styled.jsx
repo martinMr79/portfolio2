@@ -71,7 +71,7 @@ export const ProjectCard = styled.div`
   
 
   &:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 `;
 
@@ -113,6 +113,7 @@ export const GithubLink = styled.a`
   font-size: 17px;
   align-items: center;
   padding: 12px;
+  margin-bottom: 6px;
   text-decoration: none;
   color: black;
   transition: 0.5s;
