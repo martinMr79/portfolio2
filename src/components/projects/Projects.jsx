@@ -48,17 +48,32 @@ function Projects() {
           <ProjectAnchor href="https://snazzy-cupcake-064c05.netlify.app/" target="_blank" rel="noopener noreferrer">
             <ProjectImage src={BargainBasmentImage} alt="Accommodation Booking Site" />
             <ProjectP>Auction site</ProjectP>
-
-          </ProjectAnchor>
+            <p>Auction house website built with JavaScript, Sass, and Bootstrap</p> 
+            <p>Features include:</p>
+            <ul>
+              <li>account registration</li>  
+              <li>login, and logout exclusive to users with a stud.noroff.no email</li>
+              <li>Registered users can update avatars, view credit, create detailed listings, and bid on listings</li>
+              <li>Unregistered users can search available listings for accessibility and convenience</li>
+            </ul>
+            
+        </ProjectAnchor>
           <GithubLinksContainer>
               <GithubLink
                 href="https://github.com/martinMr79/Semester-Project-2/tree/main"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View code <i className="fab fa-github"></i>
+                Github Repo <i className="fab fa-github"></i>
               </GithubLink>
-            </GithubLinksContainer>
+              <GithubLink
+                href="https://github.com/martinMr79/Semester-Project-2/tree/main"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo <i className="fa-solid fa-globe"></i>
+              </GithubLink>    
+          </GithubLinksContainer>
         </ProjectCard>
 
       </ProjectsContainer>
