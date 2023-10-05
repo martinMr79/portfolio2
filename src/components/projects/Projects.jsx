@@ -12,8 +12,9 @@ function Projects() {
         
         <ProjectCard>  
           <ProjectAnchor href="https://fantastic-puppy-a523c3.netlify.app" target="_blank" rel="noopener noreferrer">
+              <ProjectP>Accommodation Booking Site</ProjectP>
             <ProjectImage src={HolidazeImage} alt="Accommodation Booking Site" />
-            <ProjectP>Accommodation Booking Site</ProjectP>
+            
 
           </ProjectAnchor>
           <GithubLinksContainer>
@@ -30,18 +31,26 @@ function Projects() {
 
         <ProjectCard>  
           <ProjectAnchor href="https://cute-gumdrop-5dee9b.netlify.app" target="_blank" rel="noopener noreferrer">
+          <ProjectP>E-Com Store</ProjectP>
             <ProjectImage src={EcomImage} alt="Accommodation Booking Site" />
-            <ProjectP>E-Com Store</ProjectP>
+            
           </ProjectAnchor>
-          <GithubLinksContainer>
+            <GithubLinksContainer>
               <GithubLink
                 href="https://github.com/martinMr79/front-end-frameworks-ca"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View code <i className="fab fa-github"></i>
+                Github Repo <i className="fab fa-github"></i>
               </GithubLink>
-            </GithubLinksContainer>
+              <GithubLink
+                href="https://cute-gumdrop-5dee9b.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo <i className="fa-solid fa-globe"></i>
+              </GithubLink>    
+          </GithubLinksContainer>
         </ProjectCard>
 
         <ProjectCard>  
