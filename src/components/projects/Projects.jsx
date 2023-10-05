@@ -11,21 +11,30 @@ function Projects() {
       <ProjectsContainer>
         
         <ProjectCard>  
-          <ProjectAnchor href="https://fantastic-puppy-a523c3.netlify.app" target="_blank" rel="noopener noreferrer">
+          <ProjectAnchor>
               <ProjectP>Accommodation Booking Site</ProjectP>
             <ProjectImage src={HolidazeImage} alt="Accommodation Booking Site" />
             
 
           </ProjectAnchor>
-          <GithubLinksContainer>
+
+
+            <GithubLinksContainer>
               <GithubLink
                 href="https://github.com/martinMr79/project-exam2-martin-mroz#holidaze-accommodation-booking-site"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View code <i className="fab fa-github"></i>
+                Github Repo <i className="fab fa-github"></i>
               </GithubLink>
-            </GithubLinksContainer>
+              <GithubLink
+                href="https://fantastic-puppy-a523c3.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo <i className="fa-solid fa-globe"></i>
+              </GithubLink>    
+          </GithubLinksContainer>
         </ProjectCard>
         
 
@@ -85,6 +94,8 @@ function Projects() {
               </GithubLink>    
           </GithubLinksContainer>
         </ProjectCard>
+
+        
 
       </ProjectsContainer>
     </ProjectSection>
