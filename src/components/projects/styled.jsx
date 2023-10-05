@@ -67,15 +67,9 @@ export const ProjectCard = styled.div`
   max-width: 400px;
   text-decoration: none;
   background-color: white; 
-  transition: transform 0.3s ease;
-  
-
-  &:hover {
-  transform: scale(1.02);
-}
 `;
 
-export const ProjectAnchor = styled.a`
+export const ProjectAnchor = styled.div`
   text-decoration: none;
   
 `;

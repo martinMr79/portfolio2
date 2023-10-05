@@ -45,9 +45,10 @@ function Projects() {
         </ProjectCard>
 
         <ProjectCard>  
-          <ProjectAnchor href="https://snazzy-cupcake-064c05.netlify.app/" target="_blank" rel="noopener noreferrer">
+          <ProjectAnchor>
+           <ProjectP>Auction site</ProjectP>
             <ProjectImage src={BargainBasmentImage} alt="Accommodation Booking Site" />
-            <ProjectP>Auction site</ProjectP>
+            
             <p>Auction house website built with JavaScript, Sass, and Bootstrap</p> 
             <p>Features include:</p>
             <ul>
@@ -67,7 +68,7 @@ function Projects() {
                 Github Repo <i className="fab fa-github"></i>
               </GithubLink>
               <GithubLink
-                href="https://github.com/martinMr79/Semester-Project-2/tree/main"
+                href="https://snazzy-cupcake-064c05.netlify.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
