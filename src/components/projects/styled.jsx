@@ -69,11 +69,6 @@ export const ProjectCard = styled.div`
   background-color: white; 
 `;
 
-export const ProjectAnchor = styled.div`
-  text-decoration: none;
-  
-`;
-
 export const ProjectImage = styled.img`
   width: 100%;
   height: 200px;

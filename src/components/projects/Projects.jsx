@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectSection, H2, ProjectsContainer, ProjectCard, ProjectImage, ProjectP, GithubLinksContainer, GithubLink, ProjectAnchor } from './styled';
+import { ProjectSection, H2, ProjectsContainer, ProjectCard, ProjectImage, ProjectP, GithubLinksContainer, GithubLink} from './styled';
 import  HolidazeImage  from '../../assets/images/Holidaze.jpg';
 import EcomImage from '../../assets/images/Ecom.jpg';
 import BargainBasmentImage from '../../assets/images/BargainBasement.jpg';
@@ -11,13 +11,12 @@ function Projects() {
       <ProjectsContainer>
         
         <ProjectCard>  
-          <ProjectAnchor>
+          
               <ProjectP>Accommodation Booking Site</ProjectP>
             <ProjectImage src={HolidazeImage} alt="Accommodation Booking Site" />
             
 
-          </ProjectAnchor>
-
+        
 
             <GithubLinksContainer>
               <GithubLink
@@ -39,11 +38,8 @@ function Projects() {
         
 
         <ProjectCard>  
-          <ProjectAnchor href="https://cute-gumdrop-5dee9b.netlify.app" target="_blank" rel="noopener noreferrer">
           <ProjectP>E-Com Store</ProjectP>
             <ProjectImage src={EcomImage} alt="Accommodation Booking Site" />
-            
-          </ProjectAnchor>
             <GithubLinksContainer>
               <GithubLink
                 href="https://github.com/martinMr79/front-end-frameworks-ca"
@@ -63,7 +59,7 @@ function Projects() {
         </ProjectCard>
 
         <ProjectCard>  
-          <ProjectAnchor>
+
            <ProjectP>Auction site</ProjectP>
             <ProjectImage src={BargainBasmentImage} alt="Accommodation Booking Site" />
             
@@ -76,7 +72,6 @@ function Projects() {
               <li>Unregistered users can search available listings for accessibility and convenience</li>
             </ul>
             
-        </ProjectAnchor>
           <GithubLinksContainer>
               <GithubLink
                 href="https://github.com/martinMr79/Semester-Project-2/tree/main"
