@@ -64,55 +64,52 @@ export const ProjectsContainer = styled.div`
 
 export const ProjectCard = styled.div`
   margin: 20px 0px;
-  max-width: 350px;
+  max-width: 400px;
   text-decoration: none;
   background-color: white; 
-  transition: transform 0.3s ease;
-  
-
-  &:hover {
-  transform: scale(1.03);
-}
-`;
-
-export const ProjectAnchor = styled.a`
-  text-decoration: none;
-  
 `;
 
 export const ProjectImage = styled.img`
-  width: 320px;
+  width: 100%;
   height: 200px;
   border: 1px, solid, black;
   margin-bottom: 4px; 
 `;
 
-export const ProjectP = styled.p`
+export const ProjectTitle = styled.h3`
   
   font-size: 20px;
   padding: 15px;
   margin-top: 0px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   color: black;
   background-color: white;
   text-align: center;
-  
   z-index: 2;
+`;
+
+export const ProjectCardText = styled.p`
+  
+  font-size: 14px;
+  padding: 15px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: black;
+  background-color: white;
+  text-align: center;
 `;
 
 export const GithubLinksContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-
+  flex-direction: row;
+  justify-content: center; 
 `;
 
 export const GithubLink = styled.a`
   font-size: 17px;
   align-items: center;
   padding: 12px;
+  margin: 10px;
   text-decoration: none;
   color: black;
   transition: 0.5s;
