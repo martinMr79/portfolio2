@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectSection, H2, ProjectsContainer, ProjectCard, ProjectImage, ProjectP, GithubLinksContainer, GithubLink} from './styled';
+import { ProjectSection, H2, ProjectsContainer, ProjectCard, ProjectImage, ProjectTitle, GithubLinksContainer, GithubLink, ProjectCardText} from './styled';
 import  HolidazeImage  from '../../assets/images/Holidaze.jpg';
 import EcomImage from '../../assets/images/Ecom.jpg';
 import BargainBasmentImage from '../../assets/images/BargainBasement.jpg';
@@ -12,10 +12,10 @@ function Projects() {
         
         <ProjectCard>  
           
-              <ProjectP>Accommodation Booking Site</ProjectP>
+              <ProjectTitle>Accommodation Booking Site</ProjectTitle>
             <ProjectImage src={HolidazeImage} alt="Accommodation Booking Site" />
             
-
+            <ProjectCardText>accommodation booking site, built with react, zustand, MUI, using Noroff`s API.</ProjectCardText>
         
 
             <GithubLinksContainer>
@@ -38,8 +38,11 @@ function Projects() {
         
 
         <ProjectCard>  
-          <ProjectP>E-Com Store</ProjectP>
+          <ProjectTitle>E-Com Store</ProjectTitle>
             <ProjectImage src={EcomImage} alt="Accommodation Booking Site" />
+
+            <ProjectCardText>An e-commerce website built using react, and styled components, using Noroff`s API.</ProjectCardText>
+
             <GithubLinksContainer>
               <GithubLink
                 href="https://github.com/martinMr79/front-end-frameworks-ca"
@@ -60,17 +63,10 @@ function Projects() {
 
         <ProjectCard>  
 
-           <ProjectP>Auction site</ProjectP>
+           <ProjectTitle>Auction site</ProjectTitle>
             <ProjectImage src={BargainBasmentImage} alt="Accommodation Booking Site" />
             
-            <p>Auction house website built with JavaScript, Sass, and Bootstrap</p> 
-            <p>Features include:</p>
-            <ul>
-              <li>account registration</li>  
-              <li>login, and logout exclusive to users with a stud.noroff.no email</li>
-              <li>Registered users can update avatars, view credit, create detailed listings, and bid on listings</li>
-              <li>Unregistered users can search available listings for accessibility and convenience</li>
-            </ul>
+            <ProjectCardText>Auction house website, built with JavaScript and Tailwind, using Noroff`s API.</ProjectCardText>
             
           <GithubLinksContainer>
               <GithubLink

@@ -76,7 +76,7 @@ export const ProjectImage = styled.img`
   margin-bottom: 4px; 
 `;
 
-export const ProjectP = styled.p`
+export const ProjectTitle = styled.h3`
   
   font-size: 20px;
   padding: 15px;
@@ -86,6 +86,17 @@ export const ProjectP = styled.p`
   background-color: white;
   text-align: center;
   z-index: 2;
+`;
+
+export const ProjectCardText = styled.p`
+  
+  font-size: 14px;
+  padding: 15px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: black;
+  background-color: white;
+  text-align: center;
 `;
 
 export const GithubLinksContainer = styled.div`
