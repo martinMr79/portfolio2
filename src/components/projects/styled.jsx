@@ -51,11 +51,11 @@ export const ProjectsContainer = styled.div`
   position: relative;
   z-index: 2;
 
-  @media (min-width: 680px) {
+  @media (min-width: 850px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (min-width: 1400px) {
+  @media (min-width: 1600px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `;
