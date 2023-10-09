@@ -30,12 +30,12 @@ export const H2 = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -100px; 
+  margin-top: 100px; 
   margin-bottom: 3rem;
   z-index: 2;
 
-  @media (max-width: 1000px) {
-  margin-top: 65px;
+  @media (max-width: 1200px) {
+ 
   margin-bottom: 35px;
   }
 `;
