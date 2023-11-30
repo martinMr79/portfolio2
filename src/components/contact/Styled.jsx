@@ -11,10 +11,17 @@ export const InnerWrapper = styled.div`
   position: relative; 
   z-index: 2;
   padding: 2em;
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  // Remove the height property
 `;
 
 
 export const PageWrapper = styled.div`  
+  display: flex; // Set as flex container
+  justify-content: center; // Center horizontally
+  align-items: center; // Center vertically
   position: relative;
   min-height: 100vh;
   background-image: url(${BackgroundImage});
@@ -34,33 +41,15 @@ export const PageWrapper = styled.div`
   }
 `;
 
-
-export const FormContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;  
-`;
-
-export const H2 = styled.h2`
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 2rem;
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-  text-align: center;  
-  z-index: 2;  
-`;
-
- export const ContactSection = styled.section`
+export const ContactSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center; 
-  justify-content: center;
+  justify-content: center; 
   margin-top: 0px;
   padding-top: 4rem;
   z-index: 2;    
 `;
-
  export const ContactList = styled.ul`
   display: flex;
   flex-wrap: wrap;
