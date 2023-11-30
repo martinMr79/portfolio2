@@ -1,12 +1,12 @@
 import React from 'react';
-import { ContactLink, ContactSection, ContactList, PageWrapper, InnerWrapper } from './Styled';
+import { ContactLink, ContactSection, ContactList, PageWrapper, InnerWrapper, H2 } from './Styled';
 
 const ContactForm = () => {
   return (
     <PageWrapper>
       <InnerWrapper> 
         <ContactSection>
-          <p>You can reach me on:</p>
+          <H2>You can reach me on:</H2>
           <ContactList>
               <li><ContactLink href="mailto:mamr@hotmal.no" title="e-mail" target="_blank" rel="noopener noreferrer"><i className="far fa-envelope"></i></ContactLink></li>
               <li><ContactLink href="tel:004790285550" title="phone" target="_blank" rel="noopener noreferrer"><i className="fas fa-phone"></i></ContactLink></li>

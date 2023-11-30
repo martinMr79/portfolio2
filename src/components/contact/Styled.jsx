@@ -14,14 +14,13 @@ export const InnerWrapper = styled.div`
   display: flex; 
   justify-content: center;
   align-items: center; 
-  // Remove the height property
 `;
 
 
 export const PageWrapper = styled.div`  
-  display: flex; // Set as flex container
-  justify-content: center; // Center horizontally
-  align-items: center; // Center vertically
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
   position: relative;
   min-height: 100vh;
   background-image: url(${BackgroundImage});
@@ -47,7 +46,7 @@ export const ContactSection = styled.section`
   align-items: center; 
   justify-content: center; 
   margin-top: 0px;
-  padding-top: 4rem;
+  padding-top: 0rem;
   z-index: 2;    
 `;
  export const ContactList = styled.ul`
@@ -60,7 +59,14 @@ export const ContactSection = styled.section`
   z-index: 2;  
 `;
 
+export const H2 = styled.h2`
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
 
+`;
 
 export const ContactLink = styled.a`
   font-size: 30px;
