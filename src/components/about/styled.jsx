@@ -28,7 +28,6 @@ export const AboutSection = styled.section`
 export const AboutContainer = styled.div`
   max-width: 800px;
   margin: 0 auto;
-  margin-top: 95px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -37,7 +36,9 @@ export const AboutContainer = styled.div`
 
   @media (max-width: 1200px) {
     max-width: 550px;
+    margin-top: 95px;
   }
+
 `;
 
 
