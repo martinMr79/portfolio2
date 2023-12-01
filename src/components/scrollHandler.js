@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const ScrollHandler = ({ routeOrder }) => {
   const navigate = useNavigate();
   const [wheelAccumulation, setWheelAccumulation] = useState(0);
-  const wheelThreshold = 20; // Adjust this threshold based on testing
+  const wheelThreshold = 50; // Adjust this threshold based on testing
   const debounceTime = 500; // Time after which the accumulated value resets
 
   const handleWheel = useCallback((event) => {
