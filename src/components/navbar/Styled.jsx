@@ -51,8 +51,8 @@ export const NavLink = styled.a`
   font-family: 'MerriweatherSans', sans-serif;
   font-size: 1.4rem;
   z-index: 2;
-  opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
-  max-height: ${({ isOpen }) => (isOpen ? '100px' : '0')};
+  opacity: ${({ $isOpen }) => ($isOpen ? '1' : '0')}; 
+  max-height: ${({ $isOpen }) => ($isOpen ? '100px' : '0')}; 
   transition: opacity 0.5s, max-height 0.5s;
 
 
