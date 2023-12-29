@@ -47,7 +47,7 @@ export const ProjectsContainer = styled.div`
   align-items: start;
   justify-content: center;
   margin: 0px auto;
-
+  margin-bottom: 5rem;
   position: relative;
   z-index: 2;
 
