@@ -56,10 +56,6 @@ npm start
 
 The application will now be running at `http://localhost:3000`.
 
-## Contributing
-
-Feel free to fork the project and submit a pull request with your changes!
-
 ## Contact
 
 You can reach me at:

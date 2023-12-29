@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   width: 100%;
   transition: max-width 0.5s ease-in-out;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +30,7 @@ export const Nav = styled.nav`
     display: flex;
     flex-direction: column;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1200px) {
       flex-direction: row;
     }
   }
@@ -74,13 +74,13 @@ export const NavLink = styled.a`
     transform: translateY(0);
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     order: -1; 
     margin: 10px 0;
     font-size: 1rem;
   }
 
-  @media (min-width: 1001px) {
+  @media (min-width: 1200px) {
     transition: all 0.5s ease-in-out 0.2s, opacity 0.5s, max-height 0.5s;
   }
 
