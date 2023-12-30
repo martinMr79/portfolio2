@@ -1,15 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ContactLink, ContactSection, ContactList, PageWrapper, InnerWrapper, H2 } from './Styled';
 
 const ContactForm = () => {
+  const [language, setLanguage] = useState('English'); // Default language
+
+  const LanguageToggle = ({ language, setLanguage }) => {
+    return (
+      <label>
+        <input
+          type="checkbox"
+          checked={language === 'Norwegian'}
+          onChange={() => setLanguage(language === 'English' ? 'Norwegian' : 'English')}
+        />
+        {language === 'English' ? 'Switch to Norwegian' : 'Switch to English'}
+      </label>
+    );
+  };
+
   const handleDownloadCV = () => {
-   
-    const cvFile = '/CV/CV Martin Mroz.pdf';
+    const cvFile = language === 'English' ? '/CV/CV Martin Mroz-English.pdf' : '/CV/CV Martin Mroz.pdf' /* '/CV/CV Martin Mroz.pdf' : '/CV/CV Martin Mroz-English.pdf'; */
     const link = document.createElement('a');
     link.href = cvFile;
-    link.download = 'CV Martin Mroz.pdf'; 
+    link.download = `CV Martin Mroz ${language}.pdf`;
     link.click();
   };
+  
 
   return (
     <PageWrapper>
@@ -22,7 +37,8 @@ const ContactForm = () => {
               <li><ContactLink href="https://no.linkedin.com/in/martin-mroz-28008121a?original_referer=https%3A%2F%2Fwww.google.com%2F" title="linkedin" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin"></i></ContactLink></li>
               <li><ContactLink id="profile-link" href="https://github.com/martinMr79" title="github" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></ContactLink></li>              
           </ContactList>
-          <button onClick={handleDownloadCV}>Download CV</button>
+          <LanguageToggle language={language} setLanguage={setLanguage} />
+        <button onClick={handleDownloadCV}>Download CV</button>
         </ContactSection>
       </InnerWrapper>
     </PageWrapper>
