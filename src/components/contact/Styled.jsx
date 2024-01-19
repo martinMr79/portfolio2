@@ -88,3 +88,46 @@ export const ContactLink = styled.a`
     transform: scale(1.1);
   }
 `; 
+
+export const CVButton = styled.button`
+  font-size: 17px;
+  align-items: center;
+  padding: 12px;
+  margin: 30px;
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+  font-family: 'MerriweatherSans', sans-serif;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+
+`;
+
+export const LanguageSelectionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+`;
+
+export const LanguageCheckboxWrapper = styled.div`
+  display: flex; 
+  align-items: center; 
+  background-color: ${props => props.isSelected ? '#E0E0E0' : 'transparent'};
+  padding: 5px; 
+  margin: 0px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+`;
+
+
+export const FlagIcon = styled.img`
+  width: 24px;
+  height: 24px;
+`;
