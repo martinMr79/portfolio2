@@ -88,3 +88,21 @@ export const ContactLink = styled.a`
     transform: scale(1.1);
   }
 `; 
+
+export const CVButton = styled.button`
+  font-size: 17px;
+  align-items: center;
+  padding: 12px;
+  margin: 30px;
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+  font-family: 'MerriweatherSans', sans-serif;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: black;
+  }
+
+`;
