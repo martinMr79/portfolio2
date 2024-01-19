@@ -1,53 +1,42 @@
 import React, { useState } from 'react';
-import { ContactLink, ContactSection, ContactList, PageWrapper, InnerWrapper, H2, CVButton } from './Styled';
+import { FlagIcon, LanguageCheckboxWrapper, LanguageSelectionWrapper, ContactLink, ContactSection, ContactList, PageWrapper, InnerWrapper, H2, CVButton } from './Styled';
 import Checkbox from '@mui/material/Checkbox';
 
 
-const EnglishFlagIcon = () => (
-  <img src="/FlagIcons/Flag_of_the_United_Kingdom_(3-5).svg" alt="English flag" width="24" height="24" />
-);
+const EnglishFlagIcon = () => <FlagIcon src="/FlagIcons/Flag_of_the_United_Kingdom_(3-5).svg" alt="English flag" />;
+const NorwegianFlagIcon = () => <FlagIcon src="/FlagIcons/Flag_of_Norway_(c8102e_for_red_&_00205b_for_blue).svg" alt="Norwegian flag" />;
 
 
-const NorwegianFlagIcon = () => (
-  <img src="/FlagIcons/Flag_of_Norway_(c8102e_for_red_&_00205b_for_blue).svg" alt="Norwegian flag" width="24" height="24" />
-);
-
-const LanguageCheckbox = ({ language, Icon, checked, onChange }) => (
-  <div>
+const LanguageCheckbox = ({ language, Icon, selectedLanguage, onLanguageChange }) => (
+  <LanguageCheckboxWrapper isSelected={selectedLanguage === language} onClick={() => onLanguageChange(language)}>
     <Checkbox
-      checked={checked}
-      onChange={onChange}
-      name={language}
+      checked={selectedLanguage === language}
+      readOnly 
       icon={<Icon />}
       checkedIcon={<Icon />}
     />
-    {language}
-  </div>
+    <span style={{ marginLeft: '8px' }}>{language}</span>
+  </LanguageCheckboxWrapper>
 );
 
 const ContactForm = () => {
-  const [selectedLanguages, setSelectedLanguages] = useState({
-    English: false,
-    Norwegian: false,
-  });
+  const [selectedLanguage, setSelectedLanguage] = useState('English');
 
-  const handleLanguageChange = (event) => {
-    setSelectedLanguages({ ...selectedLanguages, [event.target.name]: event.target.checked });
+  const handleLanguageChange = (language) => {
+    setSelectedLanguage(language);
   };
 
   const handleDownloadCV = () => {
-    Object.entries(selectedLanguages).forEach(([language, isSelected]) => {
-      if (isSelected) {
-        const cvFile = language === 'English' ? '/CV/cv-name-english.pdf' : '/CV/cv-name-norwegian.pdf';
-        const link = document.createElement('a');
-        link.href = cvFile;
-        link.download = `Your_CV_${language}.pdf`;
-        document.body.appendChild(link); // Required for Firefox
-        link.click();
-        document.body.removeChild(link);
-      }
-    });
+    const cvFile = selectedLanguage === 'English' ? '/CV/cv-name-english.pdf' : '/CV/cv-name-norwegian.pdf';
+    const link = document.createElement('a');
+    link.href = cvFile;
+    link.download = `Your_CV_${selectedLanguage}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
+
+  
 
   return (
     <PageWrapper>
@@ -62,20 +51,20 @@ const ContactForm = () => {
           </ContactList>
 
           <H2>Download my CV</H2>
-          <div> {/* Wrapper div */}
+          <LanguageSelectionWrapper>
             <LanguageCheckbox
               language="English"
               Icon={EnglishFlagIcon}
-              checked={selectedLanguages.English}
-              onChange={handleLanguageChange}
+              selectedLanguage={selectedLanguage}
+              onLanguageChange={handleLanguageChange}
             />
             <LanguageCheckbox
               language="Norwegian"
               Icon={NorwegianFlagIcon}
-              checked={selectedLanguages.Norwegian}
-              onChange={handleLanguageChange}
+              selectedLanguage={selectedLanguage}
+              onLanguageChange={handleLanguageChange}
             />
-          </div>
+          </LanguageSelectionWrapper>
           <CVButton onClick={handleDownloadCV}>Download CV</CVButton>
         </ContactSection>
       </InnerWrapper>

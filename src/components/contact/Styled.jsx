@@ -106,3 +106,28 @@ export const CVButton = styled.button`
   }
 
 `;
+
+export const LanguageSelectionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+`;
+
+export const LanguageCheckboxWrapper = styled.div`
+  display: flex; 
+  align-items: center; 
+  background-color: ${props => props.isSelected ? '#E0E0E0' : 'transparent'};
+  padding: 5px; 
+  margin: 0px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+`;
+
+
+export const FlagIcon = styled.img`
+  width: 24px;
+  height: 24px;
+`;
