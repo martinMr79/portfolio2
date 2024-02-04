@@ -25,7 +25,7 @@ function Projects() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Check it out here <i className="fa-solid fa-globe"></i>
+            www.trady.no <i className="fa-solid fa-globe"></i>
           </GithubLink>
  
       </GithubLinksContainer>
