@@ -4,6 +4,7 @@ import HolidazeImage  from '../../assets/images/Holidaze.jpg';
 import EcomImage from '../../assets/images/Ecom.jpg';
 import BargainBasmentImage from '../../assets/images/BargainBasement.jpg';
 import bitsAndBotsImage from '../../assets/images/bitsAndBotsImage.PNG'
+import TradyImage from '../../assets/images/Trady.PNG'
 
 function Projects() {
   return (
@@ -13,7 +14,26 @@ function Projects() {
 
       <ProjectCard>  
           
-          <ProjectTitle>Bits & Bots </ProjectTitle>
+          <ProjectTitle>Trady</ProjectTitle>
+        <ProjectImage src={TradyImage} alt="Accommodation Booking Site" />
+        
+        <ProjectCardText>Developed the company website for Trady AS. Built with JavaScript and TailwindCss</ProjectCardText>
+
+        <GithubLinksContainer>
+          <GithubLink
+            href="https://www.trady.no/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Check it out here <i className="fa-solid fa-globe"></i>
+          </GithubLink>
+ 
+      </GithubLinksContainer>
+    </ProjectCard>  
+
+      <ProjectCard>  
+          
+          <ProjectTitle>Bits & Bots</ProjectTitle>
         <ProjectImage src={bitsAndBotsImage} alt="Accommodation Booking Site" />
         
         <ProjectCardText> video game store website, built with react, zustand, and styled components, using Wordpress as API</ProjectCardText>
@@ -113,6 +133,7 @@ function Projects() {
           </GithubLinksContainer>
         </ProjectCard>
 
+        
         
 
       </ProjectsContainer>
