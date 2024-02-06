@@ -1,29 +1,38 @@
 import styled from 'styled-components';
 import BackgroundImage from '../../assets/images/about.jpg';
 
+export const BackgroundContainer = styled.div`
+  position: fixed; // or 'absolute', depending on layout needs
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(${BackgroundImage});
+  background-size: cover;
+  background-position: center center;
+  z-index: -1; // Ensure it stays behind the content
+`;
+
 export const AboutSection = styled.section`
+  position: relative;
+  z-index: 1; 
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-image: url(${BackgroundImage});
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  
-  &::after {
+  &::before {
     content: '';
-    background-color: white;
     position: absolute;
     top: 0;
-    bottom: 0;
-    right: 0; 
     left: 0;
-    opacity: 0.8;
-    z-index: 1;  
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7); 
+    z-index: -1; 
   }
 `;
+
 
 export const AboutContainer = styled.div`
   max-width: 800px;
