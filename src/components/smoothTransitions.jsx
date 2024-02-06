@@ -23,19 +23,19 @@ const TextSection = styled.div`
 `;
 
 const FadeInSection = ({ title, imageSrc, imageAlt, children }) => {
-    const [ref, inView] = useInView({
-      triggerOnce: true,
-      rootMargin: '-50px 0px',
-    });
-  
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: '-50px 0px',
+  });
 
-    return (
-        <FadeInSectionContainer ref={ref} inView={inView}>
-          <h2>{title}</h2>
-          <Image src={imageSrc} alt={imageAlt} />
-          <TextSection>{children}</TextSection>
-        </FadeInSectionContainer>
-      );
-    };
+  return (
+    <FadeInSectionContainer ref={ref} inView={inView}>
+      {title && <h2>{title}</h2>} 
+      {imageSrc && <Image src={imageSrc} alt={imageAlt || 'Image'} />} 
+      <TextSection>{children}</TextSection>
+    </FadeInSectionContainer>
+  );
+};
+
 
 export default FadeInSection;
