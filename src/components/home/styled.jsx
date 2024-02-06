@@ -13,6 +13,7 @@ export const HomeWrapper = styled.div`
   height: 100vh;
   color: white;
   position: relative;
+  
 
   &::after {
     content: '';
@@ -22,8 +23,8 @@ export const HomeWrapper = styled.div`
     bottom: 0;
     right: 0; 
     left: 0;
-    opacity: 0.8;
-    z-index: 1;  
+    opacity: 0.7;
+    z-index: 0;  
   }
 `;
 
@@ -33,6 +34,7 @@ export const Title = styled.h1`
   font-family: 'Roboto-Thin', sans-serif;
   text-transform: uppercase;
   z-index: 2;  
+  position: relative; 
 `;
 
 export const Subtitle = styled.h2`
@@ -40,4 +42,5 @@ export const Subtitle = styled.h2`
   margin-top: 40px;
   font-size: 27px;
   z-index: 2; 
+  position: relative; 
 `;
