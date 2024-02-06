@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { NavBar, About, Projects, Contact } from "./components";
-import  HomePage  from "./pages/home/index"
+import  HomePage  from "../src/components/home"
 import ScrollHandler from "./components/scrollHandler";
 import "./index.css";
 import GlobalStyles from './GlobalStyles';
