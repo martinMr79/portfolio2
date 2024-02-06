@@ -4,9 +4,8 @@ import styled from 'styled-components';
 
 // Styled component for the container
 const FadeInSectionContainer = styled.div`
-  transition: all 1.75s ease-out;
   opacity: ${({ inView }) => (inView ? 1 : 0)};
-  
+  transition: opacity 1.75s ease-out; // Apply the transition here
 `;
 
 // Styled component for the image
@@ -24,18 +23,19 @@ const TextSection = styled.div`
 `;
 
 const FadeInSection = ({ title, imageSrc, imageAlt, children }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: '-50px 0px',
-  });
+    const [ref, inView] = useInView({
+      triggerOnce: true,
+      rootMargin: '-50px 0px',
+    });
+  
 
-  return (
-    <FadeInSectionContainer ref={ref} inView={inView}>
-      <h2>{title}</h2>
-      <Image src={imageSrc} alt={imageAlt} />
-      <TextSection>{children}</TextSection>
-    </FadeInSectionContainer>
-  );
-};
+    return (
+        <FadeInSectionContainer ref={ref} inView={inView}>
+          <h2>{title}</h2>
+          <Image src={imageSrc} alt={imageAlt} />
+          <TextSection>{children}</TextSection>
+        </FadeInSectionContainer>
+      );
+    };
 
 export default FadeInSection;
