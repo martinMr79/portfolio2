@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // Styled component for the container
 const FadeInSectionContainer = styled.div`
   opacity: ${({ inView }) => (inView ? 1 : 0)};
-  transition: opacity 1.75s ease-out; // Apply the transition here
+  transition: opacity 0.75s ease-out; // Apply the transition here
 `;
 
 // Styled component for the image
