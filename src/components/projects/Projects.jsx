@@ -6,10 +6,22 @@ import EcomImage from '../../assets/images/Ecom.jpg';
 import BargainBasmentImage from '../../assets/images/BargainBasement.jpg';
 import bitsAndBotsImage from '../../assets/images/bitsAndBotsImage.PNG'
 import TradyImage from '../../assets/images/Trady.PNG'
+import airCalculator from '../../assets/images/airCalculator.PNG'
 
 const projects = [
+
   {
     id: 1,
+    title: 'Airfreight Chargeable weight',
+    imageUrl: airCalculator,
+    description: 'Airfreight chargeable weight, calculate weight and volume of shipments. Built with React and Tailwind',
+    links: [
+      { url: 'https://github.com/martinMr79/flyfrakt', label: 'Github Repo', icon: 'fab fa-github' },
+      { url: 'https://airfreight-volume-weight.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }
+    ]
+  },
+  {
+    id: 2,
     title: 'Trady',
     imageUrl: TradyImage,
     description: 'Developed the company website for Trady AS. Built with JavaScript and TailwindCss',
@@ -18,7 +30,7 @@ const projects = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: 'Bits & Bots',
     imageUrl: bitsAndBotsImage,
     description: 'Video game store website, built with react, zustand, and styled components, using Wordpress as API',
@@ -28,7 +40,7 @@ const projects = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: 'Accommodation Booking Site',
     imageUrl: HolidazeImage,
     description: 'Accommodation booking site, built with react, zustand, and MUI, using Noroff`s API.',
@@ -38,7 +50,7 @@ const projects = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: 'E-Com Store',
     imageUrl: EcomImage,
     description: 'An e-commerce website built using react, and styled components, using Noroff`s API.',
@@ -48,7 +60,7 @@ const projects = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     title: 'Auction Site',
     imageUrl: BargainBasmentImage,
     description: 'Auction house website, built with JavaScript and Tailwind, using Noroff`s API.',
