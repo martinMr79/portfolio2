@@ -66,9 +66,11 @@ export const Paragraph = styled.p`
 
 export const Skills = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 3px;
   align-items: center;
-  gap: 20px;
+
+  
 
   h2 {
     text-align: center;
@@ -82,10 +84,5 @@ export const Skills = styled.div`
 `;
 
 
-export const Icon = styled.i`
-  font-size: 2.5rem;
-  color: black;
-  margin: 35px 15px 3px 15px;
-  opacity: 0.8;
-`;
+
 
