@@ -6,7 +6,6 @@ import {
   H2, 
   Paragraph, 
   Skills, 
-  Icon,
   AboutContainer
 } from './styled'; 
 
