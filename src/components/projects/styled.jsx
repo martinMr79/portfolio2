@@ -12,6 +12,7 @@ export const ProjectSection = styled.section`
   background-position: center center;
   position: relative;
   
+  
   &::after {
     content: '';
     background-color: white;
@@ -50,6 +51,8 @@ export const ProjectsContainer = styled.div`
   margin-bottom: 5rem;
   position: relative;
   z-index: 2;
+  align-items: stretch; 
+  
 
   @media (min-width: 850px) {
     grid-template-columns: repeat(2, 1fr);
@@ -63,23 +66,38 @@ export const ProjectsContainer = styled.div`
 
 
 export const ProjectCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: 20px 0px;
   max-width: 400px;
-  text-decoration: none;
-  background-color: white; 
+  background-color: white;
+  transition: all 0.3s ease; 
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+  }
 `;
+
+export const ProjectCardContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1; 
+  padding: 20px;
+  
+`;
+
 
 export const ProjectImage = styled.img`
   width: 100%;
   height: 200px;
   border: 1px, solid, black;
-  margin-bottom: 4px; 
+  margin-bottom: 4px;
 `;
 
 export const ProjectTitle = styled.h3`
   
   font-size: 20px;
-  padding: 15px;
+  padding: 15px; 
   margin-top: 0px;
   margin-bottom: 10px;
   color: black;
@@ -93,7 +111,6 @@ export const ProjectCardText = styled.p`
   font-size: 14px;
   padding: 15px;
   margin-top: 0px;
-  margin-bottom: 10px;
   color: black;
   background-color: white;
   text-align: center;
@@ -101,8 +118,8 @@ export const ProjectCardText = styled.p`
 
 export const GithubLinksContainer = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: center; 
+  padding: 10px 0; 
 `;
 
 export const GithubLink = styled.a`

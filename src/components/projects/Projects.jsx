@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectSection, H2, ProjectsContainer, ProjectCard, ProjectImage, ProjectTitle, GithubLinksContainer, GithubLink, ProjectCardText} from './styled';
+import { ProjectSection, H2, ProjectsContainer, ProjectCard, ProjectCardContent, ProjectImage, ProjectTitle, GithubLinksContainer, GithubLink, ProjectCardText} from './styled';
 import FadeInSection from '../smoothTransitions';
 import HolidazeImage  from '../../assets/images/Holidaze.jpg';
 import EcomImage from '../../assets/images/Ecom.jpg';
@@ -14,7 +14,7 @@ const projects = [
     id: 1,
     title: 'Airfreight Chargeable weight',
     imageUrl: airCalculator,
-    description: 'Airfreight chargeable weight, calculate weight and volume of shipments. Built with React and Tailwind',
+    description: 'Airfreight chargeable weight, calculate weight and volume of shipments. Built with React and TailwindCSS',
     links: [
       { url: 'https://github.com/martinMr79/flyfrakt', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://airfreight-volume-weight.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -77,18 +77,20 @@ function Projects() {
       <H2>Projects</H2>
       <ProjectsContainer>
         {projects.map(project => (
-          <FadeInSection key={project.id}> {/* Wrap each project card with FadeInSection */}
+          <FadeInSection key={project.id} hasBackground={true}>
             <ProjectCard>
-              <ProjectTitle>{project.title}</ProjectTitle>
-              <ProjectImage src={project.imageUrl} alt={project.title} />
-              <ProjectCardText>{project.description}</ProjectCardText>
-              <GithubLinksContainer>
-                {project.links.map((link, index) => (
-                  <GithubLink key={index} href={link.url} target="_blank" rel="noopener noreferrer">
-                    {link.label} <i className={link.icon}></i>
-                  </GithubLink>
-                ))}
-              </GithubLinksContainer>
+              <ProjectCardContent>
+                <ProjectTitle>{project.title}</ProjectTitle>
+                <ProjectImage src={project.imageUrl} alt={project.title} />
+                <ProjectCardText>{project.description}</ProjectCardText>
+                <GithubLinksContainer>
+                  {project.links.map((link, index) => (
+                    <GithubLink key={index} href={link.url} target="_blank" rel="noopener noreferrer">
+                      {link.label} <i className={link.icon}></i>
+                    </GithubLink>
+                  ))}
+                </GithubLinksContainer>
+              </ProjectCardContent>
             </ProjectCard>
           </FadeInSection>
         ))}

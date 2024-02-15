@@ -2,10 +2,10 @@ import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
 
-// Styled component for the container
 const FadeInSectionContainer = styled.div`
+  background-color: ${({ hasBackground }) => hasBackground ? 'white' : 'transparent'};
   opacity: ${({ inView }) => (inView ? 1 : 0)};
-  transition: opacity 0.75s ease-out; // Apply the transition here
+  transition: opacity 0.75s ease-out;
 `;
 
 // Styled component for the image
@@ -18,24 +18,23 @@ const Image = styled.img`
 
 // Styled component for the text section
 const TextSection = styled.div`
-  padding: 1rem;
+ /* padding: 1rem; */
   text-align: center;
 `;
 
-const FadeInSection = ({ title, imageSrc, imageAlt, children }) => {
+const FadeInSection = ({ children, hasBackground, title, imageSrc, imageAlt }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     rootMargin: '-50px 0px',
   });
 
   return (
-    <FadeInSectionContainer ref={ref} inView={inView}>
-      {title && <h2>{title}</h2>} 
-      {imageSrc && <Image src={imageSrc} alt={imageAlt || 'Image'} />} 
+    <FadeInSectionContainer ref={ref} inView={inView} hasBackground={hasBackground}>
+      {title && <h2>{title}</h2>}
+      {imageSrc && <Image src={imageSrc} alt={imageAlt || 'Image'} />}
       <TextSection>{children}</TextSection>
     </FadeInSectionContainer>
   );
 };
-
 
 export default FadeInSection;
