@@ -77,7 +77,7 @@ function Projects() {
       <H2>Projects</H2>
       <ProjectsContainer>
         {projects.map(project => (
-          <FadeInSection key={project.id} hasBackground={true}>
+          <FadeInSection key={project.id} hasBackground={true} applyHoverEffect={true}>
             <ProjectCard>
               <ProjectCardContent>
                 <ProjectTitle>{project.title}</ProjectTitle>
