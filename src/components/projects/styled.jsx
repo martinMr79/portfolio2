@@ -72,11 +72,12 @@ export const ProjectCard = styled.div`
   margin: 20px 0px;
   max-width: 400px;
   background-color: white;
+/*
   transition: all 0.3s ease; 
   &:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
-  }
-`;
+  }  ***Needs to be applied to FadeInSectionContainer!! */
+`; 
 
 export const ProjectCardContent = styled.div`
   display: flex;
