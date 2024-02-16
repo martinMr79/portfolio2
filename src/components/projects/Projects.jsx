@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ProjectSection, H2, ProjectsContainer, ProjectCard, ProjectCardContent, ProjectImage, ProjectTitle, GithubLinksContainer, GithubLink, ProjectCardText} from './styled';
 import FadeInSection from '../smoothTransitions';
 import HolidazeImage  from '../../assets/images/Holidaze.jpg';
@@ -7,6 +7,7 @@ import BargainBasmentImage from '../../assets/images/BargainBasement.jpg';
 import bitsAndBotsImage from '../../assets/images/bitsAndBotsImage.PNG'
 import TradyImage from '../../assets/images/Trady.PNG'
 import airCalculator from '../../assets/images/airCalculator.PNG'
+import Modal from '../modal';
 
 const projects = [
 
@@ -72,13 +73,24 @@ const projects = [
 ];
 
 function Projects() {
+
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <ProjectSection>
       <H2>Projects</H2>
       <ProjectsContainer>
         {projects.map(project => (
           <FadeInSection key={project.id} hasBackground={true} applyHoverEffect={true}>
-            <ProjectCard>
+            <ProjectCard key={project.id} onClick={() => openModal(project)}>
               <ProjectCardContent>
                 <ProjectTitle>{project.title}</ProjectTitle>
                 <ProjectImage src={project.imageUrl} alt={project.title} />
@@ -95,6 +107,16 @@ function Projects() {
           </FadeInSection>
         ))}
       </ProjectsContainer>
+      <Modal show={!!selectedProject} onClose={closeModal}>
+        {selectedProject && (
+          <>
+            <h2>{selectedProject.title}</h2>
+            <img src={selectedProject.imageUrl} alt={selectedProject.title} style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }} />
+            <p>{selectedProject.description}</p>
+            {/* Render other details you want in the modal */}
+          </>
+        )}
+      </Modal>
     </ProjectSection>
   );
 }
