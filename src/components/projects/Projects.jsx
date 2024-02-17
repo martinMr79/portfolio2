@@ -108,15 +108,27 @@ function Projects() {
         ))}
       </ProjectsContainer>
       <Modal show={!!selectedProject} onClose={closeModal}>
-        {selectedProject && (
-          <>
-            <h2>{selectedProject.title}</h2>
-            <img src={selectedProject.imageUrl} alt={selectedProject.title} style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }} />
-            <p>{selectedProject.description}</p>
-            {/* Render other details you want in the modal */}
-          </>
-        )}
-      </Modal>
+  {selectedProject && (
+    <>
+      <h2>{selectedProject.title}</h2>
+      <img src={selectedProject.imageUrl} alt={selectedProject.title} style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }} />
+      <p>{selectedProject.description}</p>
+      <div>
+        {selectedProject.links.map((link, index) => (
+          <a 
+            key={index} 
+            href={link.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ display: "block", margin: "10px 0" }}>
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </>
+  )}
+</Modal>
+
     </ProjectSection>
   );
 }
