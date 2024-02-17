@@ -107,12 +107,11 @@ function Projects() {
           </FadeInSection>
         ))}
       </ProjectsContainer>
-      <Modal show={!!selectedProject} onClose={closeModal}>
+      <Modal show={!!selectedProject} project={selectedProject} onClose={closeModal}>
   {selectedProject && (
     <>
-      <h2>{selectedProject.title}</h2>
       <img src={selectedProject.imageUrl} alt={selectedProject.title} style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }} />
-      <p>{selectedProject.description}</p>
+      
       <div>
         {selectedProject.links.map((link, index) => (
           <a 

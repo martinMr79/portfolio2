@@ -2,6 +2,21 @@
 import React from 'react';
 import styled from 'styled-components';
 
+export const ModalTitle = styled.h2`
+  text-align: center;
+  margin: 0; // Adjust the margin as needed
+  padding: 20px 0; // Adds vertical padding for spacing
+  font-size: 24px; // Adjust font size as needed
+  font-weight: bold; // Makes the title bold
+`;
+
+export const ModalText = styled.h2`
+  text-align: center;
+  margin: 0; // Adjust the margin as needed
+  padding: 20px 0; // Adds vertical padding for spacing
+  font-size: 14px; // Adjust font size as needed
+`;
+
 const ModalBackdrop = styled.div`
   position: fixed;
   top: 0;
@@ -31,7 +46,7 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-const Modal = ({ children, show, onClose }) => {
+const Modal = ({ project, children, show, onClose }) => {
   if (!show) {
     return null;
   }
@@ -40,7 +55,10 @@ const Modal = ({ children, show, onClose }) => {
     <ModalBackdrop onClick={onClose}>
       <ModalContent onClick={(e) => e.stopPropagation()}>
         <CloseButton onClick={onClose}>&times;</CloseButton>
+        <ModalTitle>{project?.title}</ModalTitle>
         {children}
+        <ModalText>{project?.description}</ModalText>
+        
       </ModalContent>
     </ModalBackdrop>
   );
