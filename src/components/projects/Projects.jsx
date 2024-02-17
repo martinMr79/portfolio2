@@ -110,7 +110,6 @@ function Projects() {
       <Modal show={!!selectedProject} project={selectedProject} onClose={closeModal}>
   {selectedProject && (
     <>
-      <img src={selectedProject.imageUrl} alt={selectedProject.title} style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }} />
       
       <div>
         {selectedProject.links.map((link, index) => (

@@ -4,18 +4,24 @@ import styled from 'styled-components';
 
 export const ModalTitle = styled.h2`
   text-align: center;
-  margin: 0; // Adjust the margin as needed
-  padding: 20px 0; // Adds vertical padding for spacing
-  font-size: 24px; // Adjust font size as needed
-  font-weight: bold; // Makes the title bold
+  font-size: 2rem;
+  margin-bottom: 35px;
+  text-align: center;  
 `;
 
-export const ModalText = styled.h2`
+export const ModalText = styled.p`
   text-align: center;
-  margin: 0; // Adjust the margin as needed
-  padding: 20px 0; // Adds vertical padding for spacing
-  font-size: 14px; // Adjust font size as needed
+  margin: 0; 
+  padding: 20px 0; 
+  font-size: 16px; 
 `;
+
+export const ModalImg = styled.img`
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+`;
+
 
 const ModalBackdrop = styled.div`
   position: fixed;
@@ -57,6 +63,7 @@ const Modal = ({ project, children, show, onClose }) => {
         <CloseButton onClick={onClose}>&times;</CloseButton>
         <ModalTitle>{project?.title}</ModalTitle>
         {children}
+        <ModalImg src={project?.imageUrl} alt={project?.title} />
         <ModalText>{project?.description}</ModalText>
         
       </ModalContent>
