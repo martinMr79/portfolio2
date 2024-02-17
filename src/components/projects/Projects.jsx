@@ -16,6 +16,7 @@ const projects = [
     title: 'Airfreight Chargeable weight',
     imageUrl: airCalculator,
     description: 'Airfreight chargeable weight, calculate weight and volume of shipments. Built with React and TailwindCSS',
+    fullDescription: 'The Airfreight Chargeable Weight Calculator is an intuitive web application designed to streamline the process of calculating the chargeable weight for airfreight shipments. This tool caters to logistics professionals, freight forwarders, and anyone involved in the shipping industry, offering a precise and efficient way to determine the weight and volume of shipments. Built with React and TailwindCSS',
     links: [
       { url: 'https://github.com/martinMr79/flyfrakt', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://airfreight-volume-weight.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -26,6 +27,7 @@ const projects = [
     title: 'Trady',
     imageUrl: TradyImage,
     description: 'Developed the company website for Trady AS. Built with JavaScript and TailwindCss',
+    fullDescription: 'ddfddf',
     links: [
       { url: 'https://www.trady.no/', label: 'www.trady.no', icon: 'fa-solid fa-globe' }
     ]
@@ -35,6 +37,7 @@ const projects = [
     title: 'Bits & Bots',
     imageUrl: bitsAndBotsImage,
     description: 'Video game store website, built with react, zustand, and styled components, using Wordpress as API',
+    fullDescription: 'ddfddf',
     links: [
       { url: 'https://github.com/martinMr79/bits-and-bots', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://venerable-lebkuchen-cf4179.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -45,6 +48,7 @@ const projects = [
     title: 'Accommodation Booking Site',
     imageUrl: HolidazeImage,
     description: 'Accommodation booking site, built with react, zustand, and MUI, using Noroff`s API.',
+    fullDescription: 'ddfddf',
     links: [
       { url: 'https://github.com/martinMr79/project-exam2-martin-mroz#holidaze-accommodation-booking-site', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://fantastic-puppy-a523c3.netlify.app', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -55,6 +59,7 @@ const projects = [
     title: 'E-Com Store',
     imageUrl: EcomImage,
     description: 'An e-commerce website built using react, and styled components, using Noroff`s API.',
+    fullDescription: 'ddfddf',
     links: [
       { url: 'https://github.com/martinMr79/front-end-frameworks-ca', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://cute-gumdrop-5dee9b.netlify.app', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -65,6 +70,7 @@ const projects = [
     title: 'Auction Site',
     imageUrl: BargainBasmentImage,
     description: 'Auction house website, built with JavaScript and Tailwind, using Noroff`s API.',
+    fullDescription: 'ddfddf',
     links: [
       { url: 'https://github.com/martinMr79/Semester-Project-2/tree/main', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://snazzy-cupcake-064c05.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }

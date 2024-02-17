@@ -64,7 +64,7 @@ const Modal = ({ project, children, show, onClose }) => {
         <ModalTitle>{project?.title}</ModalTitle>
         {children}
         <ModalImg src={project?.imageUrl} alt={project?.title} />
-        <ModalText>{project?.description}</ModalText>
+        <ModalText>{project?.fullDescription}</ModalText>
         
       </ModalContent>
     </ModalBackdrop>
