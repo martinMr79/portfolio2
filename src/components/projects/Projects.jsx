@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ProjectSection, H2, ProjectsContainer, ProjectCard, ProjectCardContent, ProjectImage, ProjectTitle, GithubLinksContainer, GithubLink, ProjectCardText} from './styled';
 import FadeInSection from '../smoothTransitions';
 import HolidazeImage  from '../../assets/images/Holidaze.jpg';
@@ -7,6 +7,7 @@ import BargainBasmentImage from '../../assets/images/BargainBasement.jpg';
 import bitsAndBotsImage from '../../assets/images/bitsAndBotsImage.PNG'
 import TradyImage from '../../assets/images/Trady.PNG'
 import airCalculator from '../../assets/images/airCalculator.PNG'
+import Modal from '../modal';
 
 const projects = [
 
@@ -15,6 +16,7 @@ const projects = [
     title: 'Airfreight Chargeable weight',
     imageUrl: airCalculator,
     description: 'Airfreight chargeable weight, calculate weight and volume of shipments. Built with React and TailwindCSS',
+    fullDescription: 'The Airfreight Chargeable Weight Calculator is an intuitive web application designed to streamline the process of calculating the chargeable weight for airfreight shipments. This tool caters to logistics professionals, freight forwarders, and anyone involved in the shipping industry, offering a precise and efficient way to determine the weight and volume of shipments. Built with React and TailwindCSS',
     links: [
       { url: 'https://github.com/martinMr79/flyfrakt', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://airfreight-volume-weight.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -25,6 +27,7 @@ const projects = [
     title: 'Trady',
     imageUrl: TradyImage,
     description: 'Developed the company website for Trady AS. Built with JavaScript and TailwindCss',
+    fullDescription: 'ddfddf',
     links: [
       { url: 'https://www.trady.no/', label: 'www.trady.no', icon: 'fa-solid fa-globe' }
     ]
@@ -34,6 +37,7 @@ const projects = [
     title: 'Bits & Bots',
     imageUrl: bitsAndBotsImage,
     description: 'Video game store website, built with react, zustand, and styled components, using Wordpress as API',
+    fullDescription: 'ddfddf',
     links: [
       { url: 'https://github.com/martinMr79/bits-and-bots', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://venerable-lebkuchen-cf4179.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -44,6 +48,7 @@ const projects = [
     title: 'Accommodation Booking Site',
     imageUrl: HolidazeImage,
     description: 'Accommodation booking site, built with react, zustand, and MUI, using Noroff`s API.',
+    fullDescription: 'ddfddf',
     links: [
       { url: 'https://github.com/martinMr79/project-exam2-martin-mroz#holidaze-accommodation-booking-site', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://fantastic-puppy-a523c3.netlify.app', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -54,6 +59,7 @@ const projects = [
     title: 'E-Com Store',
     imageUrl: EcomImage,
     description: 'An e-commerce website built using react, and styled components, using Noroff`s API.',
+    fullDescription: 'ddfddf',
     links: [
       { url: 'https://github.com/martinMr79/front-end-frameworks-ca', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://cute-gumdrop-5dee9b.netlify.app', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -64,6 +70,7 @@ const projects = [
     title: 'Auction Site',
     imageUrl: BargainBasmentImage,
     description: 'Auction house website, built with JavaScript and Tailwind, using Noroff`s API.',
+    fullDescription: 'ddfddf',
     links: [
       { url: 'https://github.com/martinMr79/Semester-Project-2/tree/main', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://snazzy-cupcake-064c05.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -72,13 +79,24 @@ const projects = [
 ];
 
 function Projects() {
+
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
   return (
     <ProjectSection>
       <H2>Projects</H2>
       <ProjectsContainer>
         {projects.map(project => (
-          <FadeInSection key={project.id} hasBackground={true}>
-            <ProjectCard>
+          <FadeInSection key={project.id} hasBackground={true} applyHoverEffect={true}>
+            <ProjectCard key={project.id} onClick={() => openModal(project)}>
               <ProjectCardContent>
                 <ProjectTitle>{project.title}</ProjectTitle>
                 <ProjectImage src={project.imageUrl} alt={project.title} />
@@ -95,6 +113,26 @@ function Projects() {
           </FadeInSection>
         ))}
       </ProjectsContainer>
+      <Modal show={!!selectedProject} project={selectedProject} onClose={closeModal}>
+  {selectedProject && (
+    <>
+      
+      <div>
+        {selectedProject.links.map((link, index) => (
+          <a 
+            key={index} 
+            href={link.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ display: "block", margin: "10px 0" }}>
+            {link.label}
+          </a>
+        ))}
+      </div>
+    </>
+  )}
+</Modal>
+
     </ProjectSection>
   );
 }
