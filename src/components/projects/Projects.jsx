@@ -27,7 +27,7 @@ const projects = [
     title: 'Trady',
     imageUrl: TradyImage,
     description: 'Developed the company website for Trady AS. Built with JavaScript and TailwindCss',
-    fullDescription: 'ddfddf',
+    fullDescription: 'Developed the company website for Trady AS. Built with JavaScript and TailwindCss',
     links: [
       { url: 'https://www.trady.no/', label: 'www.trady.no', icon: 'fa-solid fa-globe' }
     ]
@@ -37,7 +37,7 @@ const projects = [
     title: 'Bits & Bots',
     imageUrl: bitsAndBotsImage,
     description: 'Video game store website, built with react, zustand, and styled components, using Wordpress as API',
-    fullDescription: 'ddfddf',
+    fullDescription: 'Video game store website, built with react, zustand, and styled components, using Wordpress as API',
     links: [
       { url: 'https://github.com/martinMr79/bits-and-bots', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://venerable-lebkuchen-cf4179.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -48,7 +48,7 @@ const projects = [
     title: 'Accommodation Booking Site',
     imageUrl: HolidazeImage,
     description: 'Accommodation booking site, built with react, zustand, and MUI, using Noroff`s API.',
-    fullDescription: 'ddfddf',
+    fullDescription: 'Holidaze is a modern, user-friendly accommodation booking site that connects users with their ideal holiday venues. With a sleek front end design, Holidaze offers seamless navigation and functionality, ensuring an enjoyable booking experience. The platform also includes an admin-facing side where registered users can manage venues and bookings efficiently.Use a stud.noroff.no e-mail adress to register a new user.',
     links: [
       { url: 'https://github.com/martinMr79/project-exam2-martin-mroz#holidaze-accommodation-booking-site', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://fantastic-puppy-a523c3.netlify.app', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -59,7 +59,7 @@ const projects = [
     title: 'E-Com Store',
     imageUrl: EcomImage,
     description: 'An e-commerce website built using react, and styled components, using Noroff`s API.',
-    fullDescription: 'ddfddf',
+    fullDescription: 'an e-commerce store built using React, aimed at applying knowledge of React and creating a functional e-commerce website. It utilizes the API provided at https://api.noroff.dev/api/v1/online-shop for retrieving product data.',
     links: [
       { url: 'https://github.com/martinMr79/front-end-frameworks-ca', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://cute-gumdrop-5dee9b.netlify.app', label: 'Demo', icon: 'fa-solid fa-globe' }
@@ -70,7 +70,7 @@ const projects = [
     title: 'Auction Site',
     imageUrl: BargainBasmentImage,
     description: 'Auction house website, built with JavaScript and Tailwind, using Noroff`s API.',
-    fullDescription: 'ddfddf',
+    fullDescription: 'Bargain Basement Auction is a website where users can add items to be bid on and bid on items listed by other users. When a new user joins the website, they are given 1000 credits to use for bidding on items. Users can earn additional credits by selling items, and they can utilize their credits to purchase items. Non-registered users can search through the listings, but only registered users can place bids on items.',
     links: [
       { url: 'https://github.com/martinMr79/Semester-Project-2/tree/main', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://snazzy-cupcake-064c05.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }
