@@ -4,10 +4,18 @@ import { useNavigate } from 'react-router-dom';
 const ScrollHandler = ({ routeOrder }) => {
   const navigate = useNavigate();
   const [wheelAccumulation, setWheelAccumulation] = useState(0);
+  const [lastNavigationTime, setLastNavigationTime] = useState(0);
   const wheelThreshold = 200; // Threshold for triggering navigation
   const debounceTime = 500; // Time to reset the accumulation
+  const navigationCooldown = 1000; // Time before another navigation can occur
 
   const handleWheel = useCallback((event) => {
+    const now = Date.now();
+    if (now - lastNavigationTime < navigationCooldown) {
+      // Prevent navigation if we're within the cooldown period
+      return;
+    }
+
     const isPageTallerThanViewport = document.body.offsetHeight > window.innerHeight;
     const isAtTop = window.pageYOffset === 0;
     const isAtBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
@@ -25,7 +33,7 @@ const ScrollHandler = ({ routeOrder }) => {
     }
 
     setWheelAccumulation(current => current + event.deltaY);
-  }, []);
+  }, [lastNavigationTime]);
 
   const navigateOnThreshold = useCallback(() => {
     const currentIndex = routeOrder.indexOf(window.location.pathname);
@@ -35,6 +43,7 @@ const ScrollHandler = ({ routeOrder }) => {
       } else if (wheelAccumulation < 0 && currentIndex > 0) {
         navigate(routeOrder[currentIndex - 1]);
       }
+      setLastNavigationTime(Date.now());
     }
     setWheelAccumulation(0); 
   }, [wheelAccumulation, navigate, routeOrder]);
@@ -55,6 +64,7 @@ const ScrollHandler = ({ routeOrder }) => {
 };
 
 export default ScrollHandler;
+
 
 
 

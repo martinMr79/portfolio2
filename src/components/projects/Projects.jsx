@@ -27,7 +27,7 @@ const projects = [
     title: 'Trady',
     imageUrl: TradyImage,
     description: 'Developed the company website for Trady AS. Built with JavaScript and TailwindCss',
-    fullDescription: 'ddfddf',
+    fullDescription: 'Developed the company website for Trady AS. Built with JavaScript and TailwindCss',
     links: [
       { url: 'https://www.trady.no/', label: 'www.trady.no', icon: 'fa-solid fa-globe' }
     ]
@@ -37,7 +37,7 @@ const projects = [
     title: 'Bits & Bots',
     imageUrl: bitsAndBotsImage,
     description: 'Video game store website, built with react, zustand, and styled components, using Wordpress as API',
-    fullDescription: 'ddfddf',
+    fullDescription: 'Video game store website, built with react, zustand, and styled components, using Wordpress as API',
     links: [
       { url: 'https://github.com/martinMr79/bits-and-bots', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://venerable-lebkuchen-cf4179.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }
