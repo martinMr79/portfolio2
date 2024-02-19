@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons'; // Corrected import
-import { faGlobe } from '@fortawesome/free-solid-svg-icons'; // Assuming you're using a globe icon from the solid icons
+import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'; 
 
 
 
@@ -47,8 +47,11 @@ export const ModalGithubLinks = styled.a`
     color: white;
     background-color: black;
   }
+`;
 
-
+  
+export const IconContainer = styled.span`
+  margin-left: 5px;
 `;
 
 const ModalBackdrop = styled.div`
@@ -119,11 +122,12 @@ const Modal = ({ project, children, show, onClose }) => {
     return (
       <ModalGithubLinks key={index} href={link.url} target="_blank" rel="noopener noreferrer">
         {link.label}
-        {iconComponent && <span style={{ marginLeft: "10px" }}>{iconComponent}</span>}
+        {iconComponent && <IconContainer>{iconComponent}</IconContainer>}
       </ModalGithubLinks>
     );
   })}
 </ModalGithubLinksContainer>
+
 
 
       </ModalContent>
