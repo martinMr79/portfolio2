@@ -1,6 +1,10 @@
-// Modal.jsx
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
+import { faGlobe } from '@fortawesome/free-solid-svg-icons'; 
+
+
 
 export const ModalTitle = styled.h2`
   text-align: center;
@@ -28,8 +32,9 @@ export const ModalGithubLinksContainer = styled.div`
 `;
 
 export const ModalGithubLinks = styled.a`
-  font-size: 17px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 12px 35px;
   margin: 10px;
   text-decoration: none;
@@ -42,6 +47,11 @@ export const ModalGithubLinks = styled.a`
     color: white;
     background-color: black;
   }
+`;
+
+  
+export const IconContainer = styled.span`
+  margin-left: 5px;
 `;
 
 const ModalBackdrop = styled.div`
@@ -93,16 +103,33 @@ const Modal = ({ project, children, show, onClose }) => {
         <ModalImg src={project?.imageUrl} alt={project?.title} />
         <ModalText>{project?.fullDescription}</ModalText>
         <ModalGithubLinksContainer>
-          {project?.links.map((link, index) => (
-            <ModalGithubLinks 
-              key={index} 
-              href={link.url} 
-              target="_blank" 
-              rel="noopener noreferrer">
-              {link.label}
-            </ModalGithubLinks>
-          ))}
-        </ModalGithubLinksContainer>
+  {project?.links.map((link, index) => {
+    let iconComponent;
+
+    // Determine the icon based on the link.icon value
+    switch (link.icon) {
+      case 'fab fa-github':
+        iconComponent = <FontAwesomeIcon icon={faGithub} />;
+        break;
+      case 'fa-solid fa-globe':
+        iconComponent = <FontAwesomeIcon icon={faGlobe} />;
+        break;
+      // Add more cases as necessary
+      default:
+        iconComponent = null; // No icon for unrecognized cases
+    }
+
+    return (
+      <ModalGithubLinks key={index} href={link.url} target="_blank" rel="noopener noreferrer">
+        {link.label}
+        {iconComponent && <IconContainer>{iconComponent}</IconContainer>}
+      </ModalGithubLinks>
+    );
+  })}
+</ModalGithubLinksContainer>
+
+
+
       </ModalContent>
     </ModalBackdrop>
   );
