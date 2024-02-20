@@ -8,6 +8,9 @@ import bitsAndBotsImage from '../../assets/images/bitsAndBotsImage.PNG'
 import TradyImage from '../../assets/images/Trady.PNG'
 import airCalculator from '../../assets/images/airCalculator.PNG'
 import Modal from '../modal';
+import { useInView } from 'react-intersection-observer';
+import { useNavigation } from '../../NavigationContext'; 
+
 
 const projects = [
 
@@ -81,6 +84,19 @@ const projects = [
 
 function Projects() {
 
+  const { setActiveSection } = useNavigation();
+  const { ref, inView } = useInView({
+    /* Optional: add configuration here, such as threshold: 0.1 */
+  });
+
+  // Update active section when the component is in view
+  React.useEffect(() => {
+    if (inView) {
+      setActiveSection('/projects'); // Update the active section
+    }
+  }, [inView, setActiveSection]);
+
+
   const [selectedProject, setSelectedProject] = useState(null);
 
   const openModal = (project) => {
@@ -92,7 +108,7 @@ function Projects() {
   };
 
   return (
-    <ProjectSection>
+      <ProjectSection ref={ref}> 
       <H2>Projects</H2>
       <ProjectsContainer>
         {projects.map(project => (

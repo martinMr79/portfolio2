@@ -8,12 +8,28 @@ import {
   Skills, 
   AboutContainer
 } from './styled'; 
+import { useInView } from 'react-intersection-observer';
+import { useNavigation } from '../../NavigationContext'; // Adjust the import path as necessary
+
+
 
 function About() {
+
+  const { setActiveSection } = useNavigation();
+  const { ref, inView } = useInView({
+    // Optional configurations (e.g., threshold)
+  });
+
+  React.useEffect(() => {
+    if (inView) {
+      setActiveSection('/about'); // Update the active section when in view
+    }
+  }, [inView, setActiveSection]);
+
   return (
     <>
       <BackgroundContainer />
-      <AboutSection>
+      <AboutSection ref={ref}>
         <FadeInSection> {/* Wrap the entire content or individual sections */}
           <AboutContainer>
             <H2>About</H2>

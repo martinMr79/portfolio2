@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; 
+import { useInView } from 'react-intersection-observer';
 import { FlagIcon, LanguageCheckboxWrapper, LanguageSelectionWrapper, ContactLink, ContactSection, ContactList, PageWrapper, InnerWrapper, H2, CVButton } from './Styled';
 import Checkbox from '@mui/material/Checkbox';
 import FadeInSection from '../smoothTransitions';
@@ -21,10 +22,20 @@ const LanguageCheckbox = ({ language, Icon, selectedLanguage, onLanguageChange }
 
 const ContactForm = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('English');
-
+  const { ref, inView } = useInView({
+    threshold: 0.1, // Trigger as soon as 10% of the element is in view
+  });
   const handleLanguageChange = (language) => {
     setSelectedLanguage(language);
   };
+
+  useEffect(() => {
+    if (inView) {
+      console.log('Contact section is in view');
+      // Perform any action when the section comes into view
+    }
+  }, [inView]);
+
 
   const handleDownloadCV = () => {
     const cvFile = selectedLanguage === 'English' ? '/CV/cv-name-english.pdf' : '/CV/cv-name-norwegian.pdf';
@@ -44,7 +55,7 @@ const ContactForm = () => {
         <FadeInSection> {/* Wrap the ContactSection for a smooth transition effect */}
           <ContactSection>
             <H2>Reach me on:</H2>
-            <FadeInSection> {/* Optionally, wrap individual sections for their own animations */}
+            <FadeInSection ref={ref}> {/* Optionally, wrap individual sections for their own animations */}
               <ContactList>
                 <li><ContactLink href="mailto:mamr@hotmal.no" title="e-mail" target="_blank" rel="noopener noreferrer"><i className="far fa-envelope"></i></ContactLink></li>
                 <li><ContactLink href="tel:004790285550" title="phone" target="_blank" rel="noopener noreferrer"><i className="fas fa-phone"></i></ContactLink></li>

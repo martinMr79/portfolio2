@@ -4,16 +4,12 @@ import { useInView } from 'react-intersection-observer'; // Ensure this is impor
 import { HomeWrapper, Title, Subtitle, Overlay } from './styled';
 
 const FadeInWrapper = styled.div`
-  opacity: 0; /* Set initial opacity */
   transition: opacity 1.75s ease-out;
-  ${({ inView }) => inView && `
-    opacity: 1; /* Transition to this opacity when inView is true */
-  `}
+  opacity: ${({ inView }) => (inView ? 1 : 0)};
 `;
 
-
 const HomePage = () => {
-  const [ref, inView] = useInView({
+  const { ref, inView } = useInView({
     triggerOnce: true, // Only trigger the animation once
     threshold: 0.5,    // Trigger when 50% of the element is in view
   });
