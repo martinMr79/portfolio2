@@ -36,13 +36,14 @@ const projects = [
     id: 3,
     title: 'Bits & Bots',
     imageUrl: bitsAndBotsImage,
-    description: 'Video game store website, built with react, zustand, and styled components, using Wordpress as API',
-    fullDescription: 'Video game store website, built with react, zustand, and styled components, using Wordpress as API',
+    description: 'Video game store website, built with React, Zustand, and styled components, using Wordpress for Backend',
+    fullDescription: "Bits & Bots is a premier video game store website. Designed for the modern gamer, our site features user registration/login, detailed game information, and a dynamic cart system for a seamless shopping experience. Utilizing React, Zustand, and Styled Components for the frontend, and WordPress with WooCommerce in headless mode for the backend.\n\nKey Features:\nPersonalized user experiences with registration/login.\nExplore games by genre with ease.\nIn-depth game details for informed choices.\nSimplified cart and checkout process.\n\nTechnology Stack:\nFrontend: React, Zustand, Styled Components.\nBackend: WordPress, WooCommerce, ACF.",
     links: [
       { url: 'https://github.com/martinMr79/bits-and-bots', label: 'Github Repo', icon: 'fab fa-github' },
       { url: 'https://venerable-lebkuchen-cf4179.netlify.app/', label: 'Demo', icon: 'fa-solid fa-globe' }
     ]
   },
+  
   {
     id: 4,
     title: 'Accommodation Booking Site',
