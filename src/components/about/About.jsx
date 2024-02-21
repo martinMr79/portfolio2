@@ -8,12 +8,21 @@ import {
   Skills, 
   AboutContainer
 } from './styled'; 
+import { useInView } from 'react-intersection-observer';
+
+
 
 function About() {
+
+
+  const { ref } = useInView({
+    // Optional configurations (e.g., threshold)
+  });
+
   return (
     <>
       <BackgroundContainer />
-      <AboutSection>
+      <AboutSection ref={ref}>
         <FadeInSection> {/* Wrap the entire content or individual sections */}
           <AboutContainer>
             <H2>About</H2>

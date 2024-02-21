@@ -5,11 +5,11 @@ import styled from 'styled-components';
 const FadeInSectionContainer = styled.div`
   background-color: ${({ hasBackground }) => hasBackground ? 'white' : 'transparent'};
   opacity: ${({ inView }) => (inView ? 1 : 0)};
-  transition: opacity 0.75s ease-out;
+  transition: opacity 1.2s ease-out;
   ${({ applyHoverEffect }) =>
     applyHoverEffect &&
     `
-    transition: all 0.3s ease; 
+    transition: all 1.2s ease; 
     &:hover {
       box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     }

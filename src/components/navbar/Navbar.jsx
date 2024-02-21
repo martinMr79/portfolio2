@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { Header, Nav, NavLink, IconContainer } from './Styled'; 
-import { Link } from 'react-router-dom';
+import { Header, Nav, IconContainer, NavLink } from './Styled'; 
+/* import { Link as ScrollLink } from 'react-scroll'; */
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
+/* import { useInView } from 'react-intersection-observer'; */
 
-function Navbar() {
+
+
+function Navbar({ onSectionClick }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
 
@@ -14,15 +17,17 @@ function Navbar() {
         <IconContainer onClick={toggle}>
           {isOpen ? <CloseIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
         </IconContainer>
-        <NavLink as={Link} to="/projects" isOpen={isOpen}>Projects</NavLink>
-        <NavLink as={Link} to="/about" isOpen={isOpen}>About</NavLink>
-        <NavLink as={Link} to="/contact" isOpen={isOpen}>Contact</NavLink>
+        <NavLink onClick={() => onSectionClick('home')} isOpen={isOpen}>Home</NavLink>
+        <NavLink onClick={() => onSectionClick('projects')} isOpen={isOpen}>Projects</NavLink>
+        <NavLink onClick={() => onSectionClick('about')} isOpen={isOpen}>About</NavLink>
+        <NavLink onClick={() => onSectionClick('contact')} isOpen={isOpen}>Contact</NavLink>
       </Nav>
     </Header>
   );
 }
 
 export default Navbar;
+
 
 
 
