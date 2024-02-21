@@ -42,8 +42,10 @@ export const IconContainer = styled.div`
   cursor: pointer;
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.button`
   color: bisque;
+  background-color: black;
+  border: none; 
   position: relative;
   margin-top: 50px;
   margin-bottom: 0px;

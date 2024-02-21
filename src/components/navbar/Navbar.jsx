@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Header, Nav, IconContainer } from './Styled'; 
+import { Header, Nav, IconContainer, NavLink } from './Styled'; 
 /* import { Link as ScrollLink } from 'react-scroll'; */
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -17,10 +17,10 @@ function Navbar({ onSectionClick }) {
         <IconContainer onClick={toggle}>
           {isOpen ? <CloseIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
         </IconContainer>
-        <button onClick={() => onSectionClick('home')}>Home</button>
-        <button onClick={() => onSectionClick('projects')}>Projects</button>
-        <button onClick={() => onSectionClick('about')}>About</button>
-        <button onClick={() => onSectionClick('contact')}>Contact</button>
+        <NavLink onClick={() => onSectionClick('home')} isOpen={isOpen}>Home</NavLink>
+        <NavLink onClick={() => onSectionClick('projects')} isOpen={isOpen}>Projects</NavLink>
+        <NavLink onClick={() => onSectionClick('about')} isOpen={isOpen}>About</NavLink>
+        <NavLink onClick={() => onSectionClick('contact')} isOpen={isOpen}>Contact</NavLink>
       </Nav>
     </Header>
   );

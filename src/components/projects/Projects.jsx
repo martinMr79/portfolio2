@@ -83,8 +83,9 @@ const projects = [
 
 function Projects() {
 
-  const { ref } = useInView({
-    /* Optional: add configuration here, such as threshold: 0.1 */
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1, // Triggers when 10% of the target is visible
   });
 
 
@@ -101,6 +102,7 @@ function Projects() {
   return (
       <ProjectSection ref={ref}> 
       <H2>Projects</H2>
+      {inView && (
       <ProjectsContainer>
         {projects.map(project => (
           <FadeInSection key={project.id} hasBackground={true} applyHoverEffect={true}>
@@ -121,6 +123,7 @@ function Projects() {
           </FadeInSection>
         ))}
       </ProjectsContainer>
+      )}
       <Modal show={!!selectedProject} project={selectedProject} onClose={closeModal}>
   {selectedProject && (
     <>
