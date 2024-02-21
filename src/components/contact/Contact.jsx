@@ -23,7 +23,7 @@ const LanguageCheckbox = ({ language, Icon, selectedLanguage, onLanguageChange }
 const ContactForm = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('English');
   const { ref, inView } = useInView({
-    threshold: 0.1, // Trigger as soon as 10% of the element is in view
+    threshold: 0.1, 
   });
   const handleLanguageChange = (language) => {
     setSelectedLanguage(language);
@@ -32,16 +32,15 @@ const ContactForm = () => {
   useEffect(() => {
     if (inView) {
       console.log('Contact section is in view');
-      // Perform any action when the section comes into view
     }
   }, [inView]);
 
 
   const handleDownloadCV = () => {
-    const cvFile = selectedLanguage === 'English' ? '/CV/cv-name-english.pdf' : '/CV/cv-name-norwegian.pdf';
+    const cvFile = selectedLanguage === 'English' ? '/CV/CV-Martin-Mroz-English.pdf' : '/CV/CV-Martin-Mroz.pdf';
     const link = document.createElement('a');
     link.href = cvFile;
-    link.download = `Your_CV_${selectedLanguage}.pdf`;
+    link.download = `Martin_Mroz_CV_${selectedLanguage}.pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -55,7 +54,7 @@ const ContactForm = () => {
         <FadeInSection> {/* Wrap the ContactSection for a smooth transition effect */}
           <ContactSection>
             <H2>Reach me on:</H2>
-            <FadeInSection ref={ref}> {/* Optionally, wrap individual sections for their own animations */}
+            <FadeInSection ref={ref}> 
               <ContactList>
                 <li><ContactLink href="mailto:mamr@hotmal.no" title="e-mail" target="_blank" rel="noopener noreferrer"><i className="far fa-envelope"></i></ContactLink></li>
                 <li><ContactLink href="tel:004790285550" title="phone" target="_blank" rel="noopener noreferrer"><i className="fas fa-phone"></i></ContactLink></li>
@@ -64,7 +63,7 @@ const ContactForm = () => {
               </ContactList>
             </FadeInSection>
             <H2>Download my CV</H2>
-            <FadeInSection> {/* Another FadeInSection for the CV and language selection */}
+            <FadeInSection> 
               <LanguageSelectionWrapper>
                 <LanguageCheckbox
                   language="English"
