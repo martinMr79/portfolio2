@@ -45,7 +45,7 @@ export const IconContainer = styled.div`
 export const NavLink = styled.button`
   color: bisque;
   background-color: black;
-  border: none; 
+  border: none;
   position: relative;
   margin-top: 50px;
   margin-bottom: 0px;
@@ -124,9 +124,5 @@ export const Header = styled.header`
     font-size: 27px;
   }  
 
-  img {
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-  }
+
 `;
