@@ -9,7 +9,6 @@ import TradyImage from '../../assets/images/Trady.PNG'
 import airCalculator from '../../assets/images/airCalculator.PNG'
 import Modal from '../modal';
 import { useInView } from 'react-intersection-observer';
-import { useNavigation } from '../../NavigationContext'; 
 
 
 const projects = [
@@ -84,17 +83,9 @@ const projects = [
 
 function Projects() {
 
-  const { setActiveSection } = useNavigation();
-  const { ref, inView } = useInView({
+  const { ref } = useInView({
     /* Optional: add configuration here, such as threshold: 0.1 */
   });
-
-  // Update active section when the component is in view
-  React.useEffect(() => {
-    if (inView) {
-      setActiveSection('/projects'); // Update the active section
-    }
-  }, [inView, setActiveSection]);
 
 
   const [selectedProject, setSelectedProject] = useState(null);

@@ -1,32 +1,39 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useRef } from "react";
+/* import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; */
 import { NavBar, About, Projects, Contact } from "./components";
+
 import HomePage from "../src/components/home"
-import ScrollHandler from "./components/scrollHandler";
 import "./index.css";
 import GlobalStyles from './GlobalStyles';
-import { NavigationProvider } from "./NavigationContext"; // Import NavigationProvider
+/* import { NavigationProvider } from "./NavigationContext"; // Import NavigationProvider */
 
 function App() {
-  const routeOrder = ['/', '/projects', '/about', '/contact'];
+  // Create refs for each section
+  const homeRef = useRef(null);
+  const projectsRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+
+  // Function to scroll to a ref
+  const scrollToRef = (ref) => window.scrollTo({ top: ref.current.offsetTop, behavior: 'smooth' });
+
+  // Passing this function to Navbar to use with onClick
+  const handleSectionClick = (section) => {
+    const sectionRef = { home: homeRef, projects: projectsRef, about: aboutRef, contact: contactRef }[section];
+    if (sectionRef) scrollToRef(sectionRef);
+  };
 
   return (
-    <NavigationProvider> 
+    <>
       <GlobalStyles />
-      <Router>
-        <NavBar />
-        <ScrollHandler routeOrder={routeOrder} />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Router>
-    </NavigationProvider>
+      <NavBar onSectionClick={handleSectionClick} />
+      <div ref={homeRef}><HomePage /></div>
+      <div ref={projectsRef}><Projects /></div>
+      <div ref={aboutRef}><About /></div>
+      <div ref={contactRef}><Contact /></div>
+    </>
   );
 }
 
 export default App;
-
 

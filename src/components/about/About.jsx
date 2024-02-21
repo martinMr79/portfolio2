@@ -9,22 +9,15 @@ import {
   AboutContainer
 } from './styled'; 
 import { useInView } from 'react-intersection-observer';
-import { useNavigation } from '../../NavigationContext'; // Adjust the import path as necessary
 
 
 
 function About() {
 
-  const { setActiveSection } = useNavigation();
-  const { ref, inView } = useInView({
+
+  const { ref } = useInView({
     // Optional configurations (e.g., threshold)
   });
-
-  React.useEffect(() => {
-    if (inView) {
-      setActiveSection('/about'); // Update the active section when in view
-    }
-  }, [inView, setActiveSection]);
 
   return (
     <>
