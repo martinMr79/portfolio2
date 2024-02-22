@@ -115,7 +115,7 @@ export const ProjectCardText = styled.p`
 export const GithubLinksContainer = styled.div`
   display: flex;
   justify-content: center; 
-  padding: 10px 0; 
+
 `;
 
 export const GithubLink = styled.a`
