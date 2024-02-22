@@ -21,7 +21,7 @@ export const ProjectSection = styled.section`
     bottom: 0;
     right: 0; 
     left: 0;
-    opacity: 0.8;
+    opacity: 0.7;
     z-index: 1;  
   }
 `;

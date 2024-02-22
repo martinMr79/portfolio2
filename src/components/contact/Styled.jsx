@@ -36,7 +36,7 @@ export const PageWrapper = styled.div`
     bottom: 0;
     right: 0; 
     left: 0;
-    opacity: 0.9;
+    opacity: 0.8;
     z-index: 1;  
   }
 `;
