@@ -13,7 +13,7 @@ export const Nav = styled.nav`
   bottom: 0;
   max-width: ${({ isOpen }) => (isOpen ? '150px' : '100px')};
   width: 100%;
-  transition: max-width 0.5s ease-in-out;
+  transition: max-width 0.3s ease-in-out;
 
   @media (max-width: 1200px) {
     flex-direction: row;
@@ -44,7 +44,7 @@ export const IconContainer = styled.div`
 
 export const NavLink = styled.button`
   color: bisque;
-  background-color: black;
+  background-color: transparent;
   border: none;
   position: relative;
   margin-top: 50px;
