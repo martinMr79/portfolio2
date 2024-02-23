@@ -72,6 +72,7 @@ export const ProjectCard = styled.div`
   margin: 20px 0px;
   max-width: 400px;
   background-color: white;
+  cursor: pointer;
 `;
 
 export const ProjectCardContent = styled.div`

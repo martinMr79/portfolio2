@@ -31,8 +31,8 @@ const TextSection = styled.div`
 
 const FadeInSection = ({ children, hasBackground, title, imageSrc, imageAlt, applyHoverEffect}) => {
   const [ref, inView] = useInView({
-    triggerOnce: true,
     rootMargin: '-50px 0px',
+    
   });
 
   return (
