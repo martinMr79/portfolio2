@@ -84,8 +84,7 @@ const projects = [
 function Projects() {
 
   const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1, // Triggers when 10% of the target is visible
+  
   });
 
 
