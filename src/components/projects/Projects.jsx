@@ -111,11 +111,17 @@ function Projects() {
                 <ProjectImage src={project.imageUrl} alt={project.title} />
                 <ProjectCardText>{project.description}</ProjectCardText>
                 <GithubLinksContainer>
-                  {project.links.map((link, index) => (
-                    <GithubLink key={index} href={link.url} target="_blank" rel="noopener noreferrer">
-                      {link.label} <i className={link.icon}></i>
-                    </GithubLink>
-                  ))}
+                {project.links.map((link, index) => (
+  <GithubLink
+    key={index}
+    href={link.url}
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={(e) => e.stopPropagation()} // Add this line
+  >
+    {link.label} <i className={link.icon}></i>
+  </GithubLink>
+))}
                 </GithubLinksContainer>
               </ProjectCardContent>
             </ProjectCard>
