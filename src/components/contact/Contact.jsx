@@ -51,7 +51,7 @@ const ContactForm = () => {
   return (
     <PageWrapper>
       <InnerWrapper>
-        <FadeInSection> {/* Wrap the ContactSection for a smooth transition effect */}
+        <FadeInSection> 
           <ContactSection>
             <H2>Reach me on:</H2>
             <FadeInSection ref={ref}> 

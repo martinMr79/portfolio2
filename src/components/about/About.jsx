@@ -16,17 +16,17 @@ function About() {
 
 
   const { ref } = useInView({
-    // Optional configurations (e.g., threshold)
+  
   });
 
   return (
     <>
       <BackgroundContainer />
       <AboutSection ref={ref}>
-        <FadeInSection> {/* Wrap the entire content or individual sections */}
+        <FadeInSection> 
           <AboutContainer>
             <H2>About</H2>
-            <FadeInSection> {/* Example: Wrapping individual paragraphs */}
+            <FadeInSection> 
               <Paragraph>
                 I've recently completed my studies in Frontend Development at Noroff School of Technology in Norway, and I'm eager to apply what I've learned in a real-world setting. I'm skilled in HTML, CSS, JavaScript, and React and I'm always looking for opportunities to improve and expand my skills.
               </Paragraph>
@@ -47,7 +47,7 @@ function About() {
               </Paragraph>
             </FadeInSection>
 
-            <FadeInSection> {/* Wrapping the Skills section */}
+            <FadeInSection> 
             <h2>Skills</h2>
               <Skills>
                 

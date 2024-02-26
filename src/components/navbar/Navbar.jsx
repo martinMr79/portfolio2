@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { Header, Nav, IconContainer, NavLink } from './Styled'; 
-/* import { Link as ScrollLink } from 'react-scroll'; */
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
-/* import { useInView } from 'react-intersection-observer'; */
-
-
 
 function Navbar({ onSectionClick }) {
   const [isOpen, setIsOpen] = useState(false);

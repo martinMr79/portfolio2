@@ -117,7 +117,7 @@ function Projects() {
     href={link.url}
     target="_blank"
     rel="noopener noreferrer"
-    onClick={(e) => e.stopPropagation()} // Add this line
+    onClick={(e) => e.stopPropagation()}
   >
     {link.label} <i className={link.icon}></i>
   </GithubLink>
