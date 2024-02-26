@@ -106,7 +106,7 @@ const Modal = ({ project, children, show, onClose }) => {
   {project?.links.map((link, index) => {
     let iconComponent;
 
-    // Determine the icon based on the link.icon value
+
     switch (link.icon) {
       case 'fab fa-github':
         iconComponent = <FontAwesomeIcon icon={faGithub} />;
@@ -114,9 +114,9 @@ const Modal = ({ project, children, show, onClose }) => {
       case 'fa-solid fa-globe':
         iconComponent = <FontAwesomeIcon icon={faGlobe} />;
         break;
-      // Add more cases as necessary
+   
       default:
-        iconComponent = null; // No icon for unrecognized cases
+        iconComponent = null; 
     }
 
     return (

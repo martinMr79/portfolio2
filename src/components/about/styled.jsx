@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import BackgroundImage from '../../assets/images/about.jpg';
 
 export const BackgroundContainer = styled.div`
-  position: fixed; // or 'absolute', depending on layout needs
+  position: fixed; 
   top: 0;
   left: 0;
   right: 0;
@@ -10,7 +10,7 @@ export const BackgroundContainer = styled.div`
   background-image: url(${BackgroundImage});
   background-size: cover;
   background-position: center center;
-  z-index: -1; // Ensure it stays behind the content
+  z-index: -1; 
 `;
 
 export const AboutSection = styled.section`
