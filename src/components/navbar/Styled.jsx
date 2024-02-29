@@ -48,7 +48,6 @@ export const NavLink = styled.button`
   border: none;
   position: relative;
   margin-top: 50px;
-  margin-bottom: 0px;
   text-decoration: none;
   font-family: 'MerriweatherSans', sans-serif;
   font-size: 1.4rem;
@@ -57,23 +56,21 @@ export const NavLink = styled.button`
   max-height: ${({ isOpen }) => (isOpen ? '100px' : '0')};
   transition: opacity 0.5s, max-height 0.5s;
 
-
   &::after {
     content: "";
-    border-bottom: 3px solid bisque;
     position: absolute;
-    top: 0;
+    top: 100%;
     left: 0;
-    transform: translateY(10px);
-    transition: transform 0.4s ease;
-    opacity: 0;
-    height: 100%;
-    width: 100%;  
+    width: 100%;
+    border-bottom: 3px solid bisque; /* Always show the border */
+    transform: translateY(20px); /* Start with the underline further down */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: ${({ isActive }) => isActive ? '1' : '0'}; /* Control visibility with opacity */
   }
 
-  &:hover::after {
-    opacity: 1;
-    transform: translateY(0);
+  &:hover::after, &:focus::after {
+    opacity: 1; /* Ensure underline is visible on hover or focus */
+    transform: translateY(3px); /* Move the underline upwards */
   }
 
   @media (max-width: 1200px) {
@@ -83,10 +80,11 @@ export const NavLink = styled.button`
   }
 
   @media (min-width: 1200px) {
-    transition: all 0.5s ease-in-out 0.2s, opacity 0.5s, max-height 0.5s;
+    transition: all 0.5s ease-in-out 0.2s, opacity 0.5s, max-height 0.
   }
+  
+  `;
 
-`;
 
 export const Header = styled.header`
   display: flex;
