@@ -3,7 +3,23 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons'; 
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'; 
+import { keyframes } from 'styled-components';
 
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
+
+const scaleUp = keyframes`
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
 
 
 export const ModalTitle = styled.h2`
@@ -55,6 +71,7 @@ export const IconContainer = styled.span`
 `;
 
 const ModalBackdrop = styled.div`
+  animation: ${fadeIn} 0.5s ease-out;
   position: fixed;
   top: 0;
   left: 0;
@@ -68,6 +85,8 @@ const ModalBackdrop = styled.div`
 `;
 
 const ModalContent = styled.div`
+  animation: ${scaleUp} 0.5s ease-out;
+  transform-origin: center;
   background-color: white;
   padding: 20px;
   border-radius: 5px;
