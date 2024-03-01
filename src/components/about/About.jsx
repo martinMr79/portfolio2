@@ -1,23 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react'; // Import useContext and useEffect
 import FadeInSection from '../smoothTransitions'; // Adjust the import path as necessary
-import { 
+import {
   BackgroundContainer,
-  AboutSection, 
-  H2, 
-  Paragraph, 
-  Skills, 
-  AboutContainer
-} from './styled'; 
+  AboutSection,
+  H2,
+  Paragraph,
+  Skills,
+  AboutContainer,
+} from './styled';
 import { useInView } from 'react-intersection-observer';
-
-
+import { useNavigation } from '../../NavigationContext'; // Ensure the correct path
 
 function About() {
-
-
-  const { ref } = useInView({
-  
+  const { ref, inView } = useInView({
+    threshold: 0.1,
   });
+
+  const { setActiveSection } = useNavigation();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection('about');
+    }
+  }, [inView, setActiveSection]);;
+
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext } from 'react';
 
 const NavigationContext = createContext();
 
@@ -6,12 +6,11 @@ export function useNavigation() {
   return useContext(NavigationContext);
 }
 
-export const NavigationProvider = ({ children }) => {
-  const [activeSection, setActiveSection] = useState('/');
-
+export const NavigationProvider = ({ children, value }) => {
   return (
-    <NavigationContext.Provider value={{ activeSection, setActiveSection }}>
+    <NavigationContext.Provider value={value}>
       {children}
     </NavigationContext.Provider>
   );
 };
+

@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import { FlagIcon, LanguageCheckboxWrapper, LanguageSelectionWrapper, ContactLink, ContactSection, ContactList, PageWrapper, InnerWrapper, H2, CVButton } from './Styled';
 import Checkbox from '@mui/material/Checkbox';
 import FadeInSection from '../smoothTransitions';
+import { useNavigation } from '../../NavigationContext'; 
 
 const EnglishFlagIcon = () => <FlagIcon src="/FlagIcons/Flag_of_the_United_Kingdom_(3-5).svg" alt="English flag" />;
 const NorwegianFlagIcon = () => <FlagIcon src="/FlagIcons/Flag_of_Norway_(c8102e_for_red_&_00205b_for_blue).svg" alt="Norwegian flag" />;
@@ -23,18 +24,20 @@ const LanguageCheckbox = ({ language, Icon, selectedLanguage, onLanguageChange }
 const ContactForm = () => {
   const [selectedLanguage, setSelectedLanguage] = useState('English');
   const { ref, inView } = useInView({
-    threshold: 0.1, 
+
   });
+  const { setActiveSection } = useNavigation(); // Use the setActiveSection function from the context
+
+  useEffect(() => {
+    console.log(inView);
+    if (inView) {
+      setActiveSection('contact'); // Set 'contact' as the active section when in view
+    }
+  }, [inView, setActiveSection]);
+
   const handleLanguageChange = (language) => {
     setSelectedLanguage(language);
   };
-
-  useEffect(() => {
-    if (inView) {
-      console.log('Contact section is in view');
-    }
-  }, [inView]);
-
 
   const handleDownloadCV = () => {
     const cvFile = selectedLanguage === 'English' ? '/CV/CV-Martin-Mroz-English.pdf' : '/CV/CV-Martin-Mroz.pdf';
@@ -49,12 +52,12 @@ const ContactForm = () => {
   
 
   return (
-    <PageWrapper>
+    <PageWrapper ref={ref}>
       <InnerWrapper>
         <FadeInSection> 
           <ContactSection>
             <H2>Reach me on:</H2>
-            <FadeInSection ref={ref}> 
+            <FadeInSection> 
               <ContactList>
                 <li><ContactLink href="mailto:mamr@hotmal.no" title="e-mail" target="_blank" rel="noopener noreferrer"><i className="far fa-envelope"></i></ContactLink></li>
                 <li><ContactLink href="tel:004790285550" title="phone" target="_blank" rel="noopener noreferrer"><i className="fas fa-phone"></i></ContactLink></li>

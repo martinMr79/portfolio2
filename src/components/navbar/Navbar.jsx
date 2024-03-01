@@ -2,10 +2,16 @@ import React, { useState } from 'react';
 import { Header, Nav, IconContainer, NavLink } from './Styled'; 
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
+import { useNavigation } from '../../NavigationContext';
 
-function Navbar({ onSectionClick, activeSection }) {
+function Navbar({ onSectionClick }) {
+  const { activeSection } = useNavigation();
   const [isOpen, setIsOpen] = useState(false);
+
   const toggle = () => setIsOpen(!isOpen);
+
+  // Determine if a NavLink is active
+  const isActive = (sectionName) => activeSection === sectionName;
 
   return (
     <Header>
@@ -13,15 +19,16 @@ function Navbar({ onSectionClick, activeSection }) {
         <IconContainer onClick={toggle}>
           {isOpen ? <CloseIcon fontSize="large" /> : <MenuIcon fontSize="large" />}
         </IconContainer>
-        {/* Pass active prop based on current section */}
-        <NavLink onClick={() => onSectionClick('home')} active={activeSection === 'home'} isOpen={isOpen}>Home</NavLink>
-        <NavLink onClick={() => onSectionClick('projects')} active={activeSection === 'projects'} isOpen={isOpen}>Projects</NavLink>
-        <NavLink onClick={() => onSectionClick('about')} active={activeSection === 'about'} isOpen={isOpen}>About</NavLink>
-        <NavLink onClick={() => onSectionClick('contact')} active={activeSection === 'contact'} isOpen={isOpen}>Contact</NavLink>
+        {/* Use the isActive function to determine if each NavLink is active */}
+        <NavLink active={isActive('home')} onClick={() => onSectionClick('home')} isOpen={isOpen}>Home</NavLink>
+        <NavLink active={isActive('projects')} onClick={() => onSectionClick('projects')} isOpen={isOpen}>Projects</NavLink>
+        <NavLink active={isActive('about')} onClick={() => onSectionClick('about')} isOpen={isOpen}>About</NavLink>
+        <NavLink active={isActive('contact')} onClick={() => onSectionClick('contact')} isOpen={isOpen}>Contact</NavLink>
       </Nav>
     </Header>
   );
 }
+
 
 
 export default Navbar;

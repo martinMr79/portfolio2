@@ -55,7 +55,7 @@ export const NavLink = styled.button`
   opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
   max-height: ${({ isOpen }) => (isOpen ? '100px' : '0')};
   transition: opacity 0.5s, max-height 0.5s;
-
+  
   &::after {
     content: "";
     position: absolute;
@@ -63,14 +63,15 @@ export const NavLink = styled.button`
     left: 0;
     width: 100%;
     border-bottom: 3px solid bisque; /* Always show the border */
-    transform: translateY(20px); /* Start with the underline further down */
+    transform: translateY(${({ active }) => active ? '0' : '20px'}); /* Adjust starting position based on active state */
     transition: transform 0.4s ease, opacity 0.4s ease;
-    opacity: ${({ isActive }) => isActive ? '1' : '0'}; /* Control visibility with opacity */
+    opacity: ${({ active }) => active ? '1' : '0'};
   }
 
+
   &:hover::after, &:focus::after {
-    opacity: 1; /* Ensure underline is visible on hover or focus */
-    transform: translateY(3px); /* Move the underline upwards */
+    opacity: 1;
+    transform: translateY(0); /* Ensure the underline moves up on hover/focus */
   }
 
   @media (max-width: 1200px) {

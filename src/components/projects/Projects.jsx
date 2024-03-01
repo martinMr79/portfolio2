@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ProjectSection, H2, ProjectsContainer, ProjectCard, ProjectCardContent, ProjectImage, ProjectTitle, GithubLinksContainer, GithubLink, ProjectCardText} from './styled';
 import FadeInSection from '../smoothTransitions';
 import HolidazeImage  from '../../assets/images/Holidaze.jpg';
@@ -9,6 +9,7 @@ import TradyImage from '../../assets/images/Trady.PNG'
 import airCalculator from '../../assets/images/airCalculator.PNG'
 import Modal from '../modal';
 import { useInView } from 'react-intersection-observer';
+import { useNavigation } from '../../NavigationContext';
 
 
 const projects = [
@@ -82,13 +83,19 @@ const projects = [
 ];
 
 function Projects() {
-
+  const [selectedProject, setSelectedProject] = useState(null);
   const { ref, inView } = useInView({
-  
+    threshold: 0.1, // adjust this value as needed
   });
 
 
-  const [selectedProject, setSelectedProject] = useState(null);
+  const { setActiveSection } = useNavigation();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection('projects'); // Set 'projects' as the active section when in view
+    }
+  }, [inView, setActiveSection]);
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -98,36 +105,35 @@ function Projects() {
     setSelectedProject(null);
   };
 
+  const handleLinkClick = (e) => {
+    e.stopPropagation();
+  };
+
+
   return (
       <ProjectSection ref={ref}> 
       <H2>Projects</H2>
       {inView && (
       <ProjectsContainer>
-        {projects.map(project => (
-          <FadeInSection key={project.id} hasBackground={true} applyHoverEffect={true}>
-            <ProjectCard key={project.id} onClick={() => openModal(project)}>
-              <ProjectCardContent>
-                <ProjectTitle>{project.title}</ProjectTitle>
-                <ProjectImage src={project.imageUrl} alt={project.title} />
-                <ProjectCardText>{project.description}</ProjectCardText>
-                <GithubLinksContainer>
+      {projects.map((project) => (
+        <FadeInSection key={project.id} hasBackground={true} applyHoverEffect={true}>
+          <ProjectCard onClick={() => openModal(project)}>
+            <ProjectCardContent>
+              <ProjectTitle>{project.title}</ProjectTitle>
+              <ProjectImage src={project.imageUrl} alt={project.title} />
+              <ProjectCardText>{project.description}</ProjectCardText>
+              <GithubLinksContainer>
                 {project.links.map((link, index) => (
-  <GithubLink
-    key={index}
-    href={link.url}
-    target="_blank"
-    rel="noopener noreferrer"
-    onClick={(e) => e.stopPropagation()}
-  >
-    {link.label} <i className={link.icon}></i>
-  </GithubLink>
-))}
-                </GithubLinksContainer>
-              </ProjectCardContent>
-            </ProjectCard>
-          </FadeInSection>
-        ))}
-      </ProjectsContainer>
+                  <GithubLink key={index} href={link.url} target="_blank" rel="noopener noreferrer" onClick={handleLinkClick}>
+                    {link.label} <i className={link.icon}></i>
+                  </GithubLink>
+                ))}
+              </GithubLinksContainer>
+            </ProjectCardContent>
+          </ProjectCard>
+        </FadeInSection>
+      ))}
+    </ProjectsContainer>
       )}
       <Modal show={!!selectedProject} project={selectedProject} onClose={closeModal}>
   {selectedProject && (

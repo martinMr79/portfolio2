@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react'; // Correctly imported useEffect
 import styled from 'styled-components'; 
 import { useInView } from 'react-intersection-observer';
 import { HomeWrapper, Title, Subtitle, Overlay } from './styled';
+import { useNavigation } from '../../NavigationContext';
 
 const FadeInWrapper = styled.div`
   transition: opacity 1.75s ease-out;
@@ -10,8 +11,16 @@ const FadeInWrapper = styled.div`
 
 const HomePage = () => {
   const { ref, inView } = useInView({
-
+    threshold: 0.1,
   });
+
+  const { setActiveSection } = useNavigation();
+  
+  useEffect(() => { // Using useEffect directly
+    if (inView) {
+      setActiveSection('home');
+    }
+  }, [inView, setActiveSection]);
 
   return (
     <HomeWrapper>
